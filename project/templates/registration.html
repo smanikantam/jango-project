@@ -1,0 +1,19 @@
+{% extends 'home.html'%}
+{% block body%}
+    <form action="registration" method="POST">
+        {% csrf_token %}
+        <center>first_name:<input type="text" class="mani" placeholder="first_name" name="f_name"></center>
+        <center>last_name:<input type="text" class="mani" placeholder="last_name" name="l_name"></center>
+        <center>username:<input type="text" class="mani" placeholder="username" name="UName"></center>
+        <center>email:<input type="mail" class="mani" placeholder="email" name="Email"></center>
+        <center>password:<input type="password" class="mani" placeholder="password" name="password1"></center>
+        <center>conform_password:<input type="password" class="mani" placeholder="password" name="password2"></center>
+        
+        <center><input type="submit" name="ghj"></center>
+    </form>
+    <div>
+        {%for m in messages%}
+            <h3>{{m}}</h3>
+        {%endfor%}
+    </div>
+{%endblock%}

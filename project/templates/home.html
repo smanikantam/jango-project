@@ -1,0 +1,73 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		td{
+			text-align: center;
+			padding: 10px ;
+		}
+		.nav{
+			display:flex;
+			align-items: center;
+			background-color: black;
+			color: white;
+			flex-wrap: wrap;
+			width: 100%;
+			position: sticky;
+			top: 0;
+    		z-index: 2;
+		}
+		.attr {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 25px;
+			width : 1350px
+		}
+		.attr li:hover {
+			background-color: rgb(255, 0, 0);
+			border-radius: 10px;
+			font-size: 25px;
+			padding: 5px;
+		}
+		.attr a {
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+			font-size: 20px;
+			font-family: 'Roboto Slab', serif;
+			margin: 10px;
+		}
+		li {
+			list-style: none;
+			padding: 5px;
+		}
+		
+	</style>
+	<title>Analysis</title>
+</head>
+<body>
+	<div class="nav">
+		<div class="img">
+			<h1>project</h1>
+		</div>
+		<div class="attr">
+			<li><a href="/">home</a></li>
+			{% if user.is_authenticated %}
+			<h4>Hello, {{user.first_name}} </h4>
+			<li><a href="logout">logout</a></li>
+			{%else%}
+			<li><a href="registration">register</a></li>
+			<li><a href="login">login</a></li>
+			{%endif%}
+		</div>
+	</div>
+	{% block body%}
+
+	{%endblock%}
+</body>
+</html>
+
