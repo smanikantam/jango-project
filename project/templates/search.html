@@ -1,0 +1,72 @@
+{% extends 'home.html'%}
+
+{%block body%}
+<center><h2 color="red">search of person analysis</h2></center>
+<div>
+<form action="find" method="post">
+    {% csrf_token %}
+    <center>
+    <input type="text" placeholder="name" class="mani" name="name"><br>
+    <input type="submit">
+    </center>
+</form>
+</div>
+<center><div>
+    {%if show %}
+        <h3 color="green">details of {{name}}</h3>
+    {%endif%}
+        <table>
+            <th>
+                <td color="orange">course_name</td>
+                <td color="orange">course_id</td>
+                <td color="orange">attempted_id</td>
+                <td color="orange">cand_RollNo</td>
+                <td color="orange">cand_email</td>
+                <td color="orange">marks</td>
+                <td color="orange">grade</td>
+            </th>
+            {% if show %}
+                {% for i in details %}
+                    {% if i.cand_name == name%}
+                    <tr>
+                        <td></td>
+                        <td>{{i.course_name}}</td>
+                        <td>{{i.course_id}}</td>
+                        <td>{{i.attempted_id}}</td>
+                        <td>{{i.cand_name}}</td>
+                        <td>{{i.cand_email}}</td>
+                        <td>{{i.marks}}</td>
+                        <td>{{i.grade}}</td>
+                    </tr>
+                    {% endif %}
+                {%endfor%}
+            </table>
+                <h3 color="green">analysis of {{name}}</h3>
+                <table>
+                    <th>
+                        <td color="orange">subject</td>
+                        <td color="orange">status</td>
+                    </th>
+                    
+                    {%for i,j in res.items%}
+                    <tr>
+                        <td></td>
+                        <td>{{i}}</td>
+                        <td>{{j}}</td>
+                    </tr>
+                    {%endfor%}
+                    
+                </table>
+            {%else%}
+                    <p>not searched yet</p>
+            {%endif%}
+
+        
+</div></center>
+
+<div>
+    {%for m in messages%}
+        <h3>{{m}}</h3>
+    {%endfor%}
+</div>
+{%endblock%}

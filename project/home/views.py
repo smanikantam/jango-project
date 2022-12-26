@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import joblib
 
-def index(request):
+def home(request):
 	return render(request,'file.html',{'name':'mani'})
 def add(request):
 	val1=int(request.POST['num1'])
@@ -114,6 +114,8 @@ def single_upload(request):
 		messages.info("not done")
 		return redirect("/")
 def search(request):
+	return render(request,"search.html")
+def find(request):
 	if(request.method=='POST'):
 		dic={0:'very poor',1:'poor',2:'average',3:'good',4:'very good'}
 		res={}
@@ -134,8 +136,7 @@ def search(request):
 		print(l)
 		# for i,j in zip(lis1,lis2):
 		# 	print(i,j)
-		return render(request,"file.html",{'details':all_names,'show':show,'name':name,'res_anal1':lis1,'res_anal2':lis2,'res':res})
+		return render(request,"search.html",{'details':all_names,'show':show,'name':name,'res_anal1':lis1,'res_anal2':lis2,'res':res})
 	else:
 		return redirect("/")
-
 
