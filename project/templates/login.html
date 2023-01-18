@@ -1,11 +1,33 @@
 {% extends 'home.html'%}
 {% block body%}
+
+<div class="form">
+    <center>
     <form action="login" method="post">
+        {%csrf_token%}
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Roll no" name="UName">
+            <label for="floatingInput">Roll no</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="pass_word">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <center><button type="submit" class="btn btn-primary">submit</button></center>
+        <a href="forgot">forgot password?</a>
+    </form>
+</center>
+</div>
+
+
+
+
+    <!-- <form action="login" method="post">
         {% csrf_token %}
         <center>Roll Number<input type="text" placeholder="Rool no" name="UNmae"><br> </center>
         <center>password<input type="password" placeholder="password" name="pass_word"><br></center>
         <center><input type="submit" value="Submit"></center>
-    </form>
+    </form> -->
     <div>
         {%for m in messages%}
             <h3>{{m}}</h3>

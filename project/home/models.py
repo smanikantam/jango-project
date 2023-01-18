@@ -16,7 +16,7 @@ class student(models.Model):
 
     course_name = models.CharField(max_length=50)
     course_id = models.CharField(max_length=50)
-    attempted_id=models.IntegerField()
+    attempted_id=models.CharField(max_length=50)
     cand_name=models.CharField(max_length=50)
     cand_email=models.CharField(max_length=50)
     marks=models.IntegerField()

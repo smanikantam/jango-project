@@ -27,3 +27,15 @@ img.blur {
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
 
 }
+.form {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  max-width: 400px;
+  min-height: 50vh;
+  border: 1px solid black;
+  flex-direction: column;
+}

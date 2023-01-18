@@ -1,0 +1,63 @@
+{%extends 'home.html'%}
+
+{%block body%}
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a style="text-decoration: none;" href="single_search_person"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Single Search </button></a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a style="text-decoration: none;" href="entire_search_person"><button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Entire Search</button></a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a style="text-decoration: none;" href="todo_list"><button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Todo list</button></a>
+      </li>
+  </ul>
+<div style="padding: 20px;" >
+    <div class="form">
+    <center>
+        <h2>search entire students</h2>
+
+        <form action="entire_search_person" method="post">
+            {%csrf_token%}
+            course: <select class="form-select" aria-label="Default select example" name="acourse">
+                {%for i in details_course%}
+                <option value="{{i}}">{{i}}</option>
+                {%endfor%}
+            </select><br>
+            status <select class="form-select" aria-label="Default select example" name="astatus">
+                {%for i in status%}
+                <option value="{{i}}">{{i}}</option>
+                {%endfor%}
+            </select><br>
+            <input type="submit">
+    </center>
+    </form>
+</div>
+    <center>
+        <table>
+            <tr>
+                <th>
+                    <h2>{{course}}</h2>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <h2>{{astatus}}</h2>
+                </th>
+            </tr>
+            {%for i in res%}
+            <tr>
+                <td>
+                    {{i}}
+                </td>
+            </tr>
+            {%endfor%}
+        </table>
+    </center>
+</div>
+<div>
+	{%for m in messages%}
+	<h3>{{m}}</h3>
+	{%endfor%}
+</div>
+{%endblock%}

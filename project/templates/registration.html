@@ -1,6 +1,38 @@
 {% extends 'home.html'%}
 {% block body%}
-    <form action="registration" method="POST">
+<div class="form">
+    <center>
+    <form action="registration" method="post">
+        {%csrf_token%}
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="first name" name="f_name">
+            <label for="floatingInput">first name</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingPassword" placeholder="last name" name="l_name">
+            <label for="floatingInput">last name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="Email">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingPassword" placeholder="username" name="UName">
+            <label for="floatingInput">username</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password1">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password" name="password2">
+            <label for="floatingPassword">Confirm Password</label>
+          </div>
+          <center><button type="submit" class="btn btn-primary">submit</button></center>
+    </form>
+</center>
+</div>
+    <!-- <form action="registration" method="POST">
         {% csrf_token %}
         <center>first_name:<input type="text" class="mani" placeholder="first_name" name="f_name"></center>
         <center>last_name:<input type="text" class="mani" placeholder="last_name" name="l_name"></center>
@@ -10,7 +42,7 @@
         <center>conform_password:<input type="password" class="mani" placeholder="password" name="password2"></center>
         
         <center><input type="submit" name="ghj"></center>
-    </form>
+    </form> -->
     <div>
         {%for m in messages%}
             <h3>{{m}}</h3>

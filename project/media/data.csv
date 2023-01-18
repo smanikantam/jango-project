@@ -1,4 +1,396 @@
 ,course_name,course_id,attempted_id,cand_name,cand_email,marks,grade
-0,chem,A6025,90,20881A0562,dskjc@kjdsnc.cd,100,A+
-1,ml,A5720,456,20881A0593,dsjb@jdkfn.c,99,A
-2,physics,A5645,4556,20881A05B1,fsv@d.j,0,F
+0,Core JAVA,TCCJ01,AT1,Amanchi Chandana,chandanaamanchi2001@gmail.com,85,A
+1,Core JAVA,TCCJ01,AT1,Amanchi Chandrika,chandrikaamanchi@gmail.com,65,B
+2,Core JAVA,TCCJ01,AT1,Ambati Siva Praveen Reddy,sivapraveenreddy113@gmail.com,70,B
+3,Core JAVA,TCCJ01,AT1,Ankireddypalli Bhargavi,ankireddypallib8@gmail.com,72,B
+4,Core JAVA,TCCJ01,AT1,Venkata Sai Rama Krishna Reddy,aravasairamreddy@gmail.com,89,A
+5,Core JAVA,TCCJ01,AT1,Ayyapu Venkata Saranya,saranyaa.a2023@gmail.com,90,A
+6,Core JAVA,TCCJ01,AT1,B.Sumanth,sumanthroyal311@gmail.com,95,A
+7,Core JAVA,TCCJ01,AT1,B.Yogitha ,byogitha1117@gmail.com,96,A
+8,Core JAVA,TCCJ01,AT1,B.Swathi,battenaswathireddy@gmail.com,97,A
+9,Core JAVA,TCCJ01,AT1,Bellamkonda Sravan,sravanbellamkonda293@gmail.com,45,C
+10,Core JAVA,TCCJ01,AT1,B.Keerthana ,kertkeerthana@gmail.com ,55,C
+11,Core JAVA,TCCJ01,AT1,Boda Shanmukha Subramani,bssmani16@gmail.com,60,B
+12,Core JAVA,TCCJ01,AT1,B.Sai Raghavulu,raghavb273@gmail.com,65,B
+13,Core JAVA,TCCJ01,AT1,Bommepalli Roop Sagar Reddy,roopbommepalli@gmail.com,66,B
+14,Core JAVA,TCCJ01,AT1,C.Supriya,challesupriya@gmail.com,68,B
+15,Core JAVA,TCCJ01,AT1,Chakrala Lokesh Kumar,chakralalokesh01@gmail.com,97,A
+16,Core JAVA,TCCJ01,AT1,Chappidi Charan Kumar Reddy,charankumarreddychappidi@gmail.com,45,C
+17,Core JAVA,TCCJ01,AT1,Chinthalapalli Shivani,shivanichinthalapalli@gmail.com,55,C
+18,Core JAVA,TCCJ01,AT1,Meghana Chintham,meghanachintham@gmail.com,60,B
+19,Core JAVA,TCCJ01,AT1,C.Govardhan,govardhanyadav255@gmail.com,65,B
+20,Core JAVA,TCCJ01,AT1,D.M.Meenakshi,dmmeenapatil@gmail.com,66,B
+21,Core JAVA,TCCJ01,AT1,D.Sai Pranitha,saipranithadampetla@gmail.com,68,B
+22,Core JAVA,TCCJ01,AT1,Dara Someswar Kumar,Skdara217@gmail.com,56,C
+23,Core JAVA,TCCJ01,AT1,D. Chakradhar Reddy,chakric590@gmail.com,55,C
+24,Core JAVA,TCCJ01,AT1,D.Vamshi,vamshidheringula@gmail.com,55,C
+25,Core JAVA,TCCJ01,AT1,D. Vigneshwar Reddy,sai880066@gmail.com,56,C
+26,Core JAVA,TCCJ01,AT1,D.Sivareddy,sivareddyduddikunta@gmail.com,87,A
+27,Core JAVA,TCCJ01,AT1,G.Bharath Kumar,Bharathkumar9829@gmail.com,65,B
+28,Core JAVA,TCCJ01,AT1,G. Sai Deepika,deepikagadamsetty@gmail.com,66,B
+29,Core JAVA,TCCJ01,AT1,G.Swetha,gadirajuswethagadiraju@gmail.com,78,A
+30,Core JAVA,TCCJ01,AT1,G.Indrani,gajjalaindranireddy@gmail.com,88,A
+31,Core JAVA,TCCJ01,AT1,Godi Hemalatha,hemalathagodi5@gmail.com,49,C
+32,Core JAVA,TCCJ01,AT1,Goli Radha Krishna Sheershika,golisheershika@gmail.com,70,B
+33,Core JAVA,TCCJ01,AT1,Gopemmagari Narendranath Reddy ,narendranathreddygopemmagari@gmail.com ,50,C
+34,Core JAVA,TCCJ01,AT1,Gorla Sireesha Devi,sireeshadevi001@gmail.com,56,C
+35,Core JAVA,TCCJ01,AT1,Yaswanth Reddy,gyaswanthreddy2000@gmail.com,10,C
+36,Core JAVA,TCCJ01,AT1,Gujjula Lalitha Sree,lalithasreeyadav@gmail.com,36,C
+37,Core JAVA,TCCJ01,AT1,G.Venkata Siva Sai Teja,gvssaiteja8@gmail.com,46,C
+38,Core JAVA,TCCJ01,AT1,Sudharma Gurijala,dollyreddy472@gmail.com,67,B
+39,Core JAVA,TCCJ01,AT1,I Uday Teja Reddy,udaytejareddy541@gmail.com,45,C
+40,Core JAVA,TCCJ01,AT1,J Rakesh,jestadirakesh262@gmail.com,33,C
+41,Core JAVA,TCCJ01,AT1,Kadiveti Samatha Rukmini ,samatharukmini@gmail.com ,32,C
+42,Core JAVA,TCCJ01,AT1,K Tirupathi Reddy,kakarlatirupathireddy@gmail.com,38,C
+43,Core JAVA,TCCJ01,AT1,K. Sai Pratap Reddy,saipratapreddy662@gmail.com,90,A
+44,Core JAVA,TCCJ01,AT1,K. Chaitanya Lakshmi,kammachaitanyalakshmi2001@gmail.com,99,A
+45,Core JAVA,TCCJ01,AT1,K.Veera Jyothi,karamallaveerajyothi00@gmail.com,87,A
+46,Core JAVA,TCCJ01,AT1,Kavuturi Hareesh,hareeshchowdari007@gmail.com,88,A
+47,Core JAVA,TCCJ01,AT1,Korna Neeraja,neerajakorna@gmail.com,65,B
+48,Core JAVA,TCCJ01,AT1,Kudumala Aasritha,aasritha3011@gmail.com,45,C
+49,Core JAVA,TCCJ01,AT1,Kopparapu Likhitha,kopparapulikhitha@gmail.com,68,B
+50,SQL,TCSQ02,AT1,K. Jasmine ,kottapallijasmine@gmail.com,89,A
+51,SQL,TCSQ02,AT1,K.Venkata Kalyan,kvkalyan66@gmail.com,99,A
+52,SQL,TCSQ02,AT1,K. Lakshmi Likhitha,likhithakunjeti2000@gmail.com,45,C
+53,SQL,TCSQ02,AT1,K.Venkata Sai Sravani,kuntlurusravani@gmail.com,33,C
+54,SQL,TCSQ02,AT1,L. Lavanya ,lavanyalevaku559@gmail.com ,47,C
+55,SQL,TCSQ02,AT1,L.Shireesha ,shireeshareddylevaku@gmail.com ,46,C
+56,SQL,TCSQ02,AT1,Menta Venkatesh,vv0269132@gmail.com,66,B
+57,SQL,TCSQ02,AT1,M.Venkata Subramanyam,royalvenky517@gmail.com,55,C
+58,SQL,TCSQ02,AT1,Mughal Mohammed Umar Baig,umarbaig2621@gmail.com,33,C
+59,SQL,TCSQ02,AT1,M.Vyshnavi,vyshnavimuli@gmail.com,22,C
+60,SQL,TCSQ02,AT1,Muthyala Venkat Pavan Kumar,pavanroyal585@gmail.com,85,A
+61,SQL,TCSQ02,AT1,Muttarasu Indira,muthrasindira@gmail.com,65,B
+62,SQL,TCSQ02,AT1,N.Harikrishna,harikrishnanallamaru@gmail.com,70,B
+63,SQL,TCSQ02,AT1,Yaswanth Reddy,yaswanthreddy8776@gmail.com,72,B
+64,SQL,TCSQ02,AT1,N.Reddy Latha,nutetireddylatha@gmail.com,89,C
+65,SQL,TCSQ02,AT1,Pabbishetti Srilatha ,psrilatha9182@gmail.com ,65,B
+66,SQL,TCSQ02,AT1,Palagiri Venkata Dinesh Kumar Raju,pvdkraju2002@gmail.com,66,B
+67,SQL,TCSQ02,AT1,Krishna Veni Palakolanu,palakolanu.krishnaveni2002@gmail.com,68,B
+68,SQL,TCSQ02,AT1,Parla Abhinay Yadav,abhinayy456@Gmail.com,56,C
+69,SQL,TCSQ02,AT1,P.Prathyusha,pathimaprathyusha@gmail.com,55,C
+70,SQL,TCSQ02,AT1,Pernapati Akshaya,akshayaa0757@gmail.com,55,C
+71,SQL,TCSQ02,AT1,Pesala Pavan Kumar Reddy,pavanpesala1@gmail.com,56,C
+72,SQL,TCSQ02,AT1,Pidugu Satish,Pidugusatish94@gmail.com,87,A
+73,SQL,TCSQ02,AT1,P.V.Harindhara Reddy,harindharareddy@gmail.com,65,B
+74,SQL,TCSQ02,AT1,Policherla Venkata Sai Preethi,pp5513210@gmail.com,66,B
+75,SQL,TCSQ02,AT1,Puttu Manasa,manasaputtu6@gmail.com,78,A
+76,SQL,TCSQ02,AT1,R.Thulasi Chandana,chandanakrishnarachagollak@gmail.com,45,C
+77,SQL,TCSQ02,AT1,Rajoli Vishweswar Reedy,rajolivishweswarreddy7702@gmail.com,55,C
+78,SQL,TCSQ02,AT1,Rami Reddy Swathi,swathiramireddy1904@gmail.com,60,B
+79,SQL,TCSQ02,AT1,Rebba Lavanya,rebbalavanya123@gmail.com,65,B
+80,SQL,TCSQ02,AT1,S Ayesha Siddiqha,ayeshasiddiqha06@gmail.com,66,B
+81,SQL,TCSQ02,AT1,S Ganga Sreenetha,gangasreenethasandadi@gmail.com,68,B
+82,SQL,TCSQ02,AT1,S Hameed Hussain,hameedshaikzz786@gmail.com,56,C
+83,SQL,TCSQ02,AT1,Shaik Mahammad Sameer,Sameersms0507@gmail.com ,55,C
+84,SQL,TCSQ02,AT1,Shaik Mahammed Haneef,shaikmahammedhaneef565@gmail.com,55,C
+85,SQL,TCSQ02,AT1,S.M.Zeenath Begum,zeenath6786@gmail.com,56,C
+86,SQL,TCSQ02,AT1,Shaik Mohammad Owais Qarni ,shaikowais457@gmail.com,87,A
+87,SQL,TCSQ02,AT1,Shaik Mohammed Salam,shaikmohammedsalam000@gmail.com,65,B
+88,SQL,TCSQ02,AT1,Shaik Sofiya,shaiktina02@gmail.com,66,B
+89,SQL,TCSQ02,AT1,Sunkara Sai Rohith Kumar,sairohithkumar6@gmail.com,78,A
+90,SQL,TCSQ02,AT1,T.Rishitha ,rishithasvck@gmail.com,88,A
+91,SQL,TCSQ02,AT1,T.Vamsi,vamsithirumalasetty05@gmail.com,49,C
+92,SQL,TCSQ02,AT1,T.Madhu Sudhan Reddy,madhureddyt7@gmail.com,70,B
+93,SQL,TCSQ02,AT1,Abhiram Sai,upadrashtaabhiram123@gmail.com,50,C
+94,SQL,TCSQ02,AT1,V Vijay Kanth,vijaykanth019@gmail.com,56,C
+95,SQL,TCSQ02,AT1,V.Likitha,vempallilikitha67@gmail.com,10,C
+96,SQL,TCSQ02,AT1,Naga Meghana Yadam,meghanaroyal333@gmail.com,36,C
+97,SQL,TCSQ02,AT1,Yadam Sangamesh,sangameshyadam@gmail.com,46,C
+98,SQL,TCSQ02,AT1,Y. G. Prashanth Reddy,peashanthreddy256@gmail.com,67,B
+99,SQL,TCSQ02,AT1,Y.Siva Kasi Reddy,reedysivakasi@gmail.com,45,C
+100,Blockchain,TCBC03,AT1,C.Pavan Venkata Lakshmi,pavanchilumula98@gmail.com,33,C
+101,Blockchain,TCBC03,AT1,Kanta Siva Sruthi,sivasruthikanta098@gmail.com,32,C
+102,Blockchain,TCBC03,AT1,Karnati Tejasree,tejasreekarnati123@gmail.com,38,C
+103,Blockchain,TCBC03,AT1,Makkala Nagendra,makkalanagendra18@gmail.com,90,A
+104,Blockchain,TCBC03,AT1,B.Lakshmi Prasanna,lakshmiprasanna1924@gmail.com,99,A
+105,Blockchain,TCBC03,AT1,Pv Sai Vamsi ,pipallavenkatasaivamsi@gmail.com ,87,A
+106,Blockchain,TCBC03,AT1,Rakesh Abbannagari,rakeshabbannagari@gmail.com,88,A
+107,Blockchain,TCBC03,AT1,Alavalapati Adarsha Kumar Reddy,adarshakumarreddy207@gmail.com,65,B
+108,Blockchain,TCBC03,AT1,A.Sreevani,amurusreevaniece@gmail.com,45,C
+109,Blockchain,TCBC03,AT1,Bhumireddy  Govardhani ,govardhanibhumireddy@gmail.com,68,B
+110,Blockchain,TCBC03,AT1,B. Tejaswani,tejaswanibhupathi@gmail.com,89,A
+111,Blockchain,TCBC03,AT1,B. Geetha Sree Reddy ,Geethareddym15@gmail.com ,99,A
+112,Blockchain,TCBC03,AT1,Busagani Shasi Kala ,busaganishasikala8688@gmail.com,45,C
+113,Blockchain,TCBC03,AT1,C.Jahnavi,Challurjahnavi@gmail.com,33,C
+114,Blockchain,TCBC03,AT1,C.S.Qurrathul Ain,ain.cshaik@gmail.com ,47,C
+115,Blockchain,TCBC03,AT1,D.Anil,anilsvck@gmail.com,46,C
+116,Blockchain,TCBC03,AT1,Dannada Mehataj,dannadamehataj14@gmail.com,66,B
+117,Blockchain,TCBC03,AT1,Devireddy Varshini,Varshinireddy304@gmail.com,55,C
+118,Blockchain,TCBC03,AT1,E.Sushma,sushmaeraganaboina@gmail.com,33,C
+119,Blockchain,TCBC03,AT1,G. Nikitha,Nikithanatural9394@gmail.com,22,C
+120,Blockchain,TCBC03,AT1,G. V. Ramana Kumar Reddy,ramanaredfy4@gmail.com,45,C
+121,Blockchain,TCBC03,AT1,J. Sureshrao,Jadavasuresh143@gmail.com,55,C
+122,Blockchain,TCBC03,AT1,J.Revathi ,Jilakararevathi123@gmail.com ,60,B
+123,Blockchain,TCBC03,AT1,J Neeraja,neerajajonnadula157@gmail.com,65,B
+124,Blockchain,TCBC03,AT1,Kamanuru.Aparna,kamanuruaparna963@gmail.com,66,B
+125,Blockchain,TCBC03,AT1,K.Charani Niharika,charaniniharika@gmail.com,68,B
+126,Blockchain,TCBC03,AT1,Lokesh Kendole,lokeshkendole7@gmail.com,97,A
+127,Blockchain,TCBC03,AT1,Siva Krishna Koppolu,sivakrishnak67@gmail.com,45,C
+128,Blockchain,TCBC03,AT1,Korapala Veera Bharath Kumar,bharathkorapala123@gmail.com,55,C
+129,Blockchain,TCBC03,AT1,Korivi Venkata Sai Tharun,tharuntrendy86@gmail.com,60,B
+130,Blockchain,TCBC03,AT1,Kotluru Vishnu Kumar,Kotluruvishnu@gmail.com,65,B
+131,Blockchain,TCBC03,AT1,K.Sai Sudhishna ,Kottasaisudhishna@gmail.com,66,B
+132,Blockchain,TCBC03,AT1,Kovvuru Siddhu,siddhukovvuru5277@gmail.com,68,B
+133,Blockchain,TCBC03,AT1,Koyalakuntla Venkata Siva Sai ,Sairoyals220@gmail.com ,56,C
+134,Blockchain,TCBC03,AT1,Malisetty Anil Kumar,mallishettyanilkumar@gmail.com,55,C
+135,Blockchain,TCBC03,AT1,M Shambhavi,Mallireddyshambhavi41841@gmail.com,55,C
+136,Blockchain,TCBC03,AT1,Manam Sudheer ,manamsudheer12345@gmail.com,56,C
+137,Blockchain,TCBC03,AT1,Jaya Teja Manchala,manchalajayateja@gmail.com,87,A
+138,Blockchain,TCBC03,AT1,M.Maurya Simha,mankalamauryasimha123@gmail.com,65,B
+139,Blockchain,TCBC03,AT1,M. Harshitha ,modemharshitha2001@gmail.com,66,B
+140,Blockchain,TCBC03,AT1,M. Sai Ganesh,modugulasaiganesh69@gmail.com,78,A
+141,Blockchain,TCBC03,AT1,Lavakumarreddy M,mukkalavakumarreddy123@gmail.com,88,A
+142,Blockchain,TCBC03,AT1,B. Bhuvaneswari,bhuvanasri666@gmail.com,49,C
+143,Blockchain,TCBC03,AT1,C Sravani,chinthakuntasravani42@gmail.com,70,B
+144,Blockchain,TCBC03,AT1,G.Sukanya,gsukanya013@gmail.com,50,C
+145,Blockchain,TCBC03,AT1,Guduru Basha,gudurubasha7@gmail.com,56,C
+146,Blockchain,TCBC03,AT1,K.Renuka,renukareddykakarla2121@gmail.com,10,C
+147,Blockchain,TCBC03,AT1,K.Kishore Babu,kishorbabu056@gmail.com,36,C
+148,Blockchain,TCBC03,AT1,Kuppala Narasimha Gangadhar,kuppalanarasimha3333@gmail.com,46,C
+149,Blockchain,TCBC03,AT1,Kurugodu Renukanjali,renukurugodu03@gmail.com,67,B
+150,Blockchain,TCBC03,AT1,Madhugundu Sai Krishna,saibbaiac@gmail.com,45,C
+151,Cyber Security,TCCS04,AT1,Nagaraju Sai Anjani ,Saianjani965@gmail.com ,33,C
+152,Cyber Security,TCCS04,AT1,Shanmuka Reddy N,shanreddy754@gmail.com,32,C
+153,Cyber Security,TCCS04,AT1,P.Swarnalatha,swarnapalla512@gmail.com,38,C
+154,Cyber Security,TCCS04,AT1,Pathi Tejaswini,tejaswinipathi1701@gmail.com,90,A
+155,Cyber Security,TCCS04,AT1,Pattupogula Bramhaja,pattupogulabramhaja@gmail.com,99,A
+156,Cyber Security,TCCS04,AT1,Payyavula Mounika,Payyavulamounika456@gmail.com,87,A
+157,Cyber Security,TCCS04,AT1,Pradyumna Sree P,pradyumnasree2001@gmail.com,88,A
+158,Cyber Security,TCCS04,AT1,Peteti Vishnu Vardhan ,Vishnupeteti219@gmail.com ,65,B
+159,Cyber Security,TCCS04,AT1,P. Anuhya,anuhya411@gmail.com,45,C
+160,Cyber Security,TCCS04,AT1,R Suma Chandana ,Sumachandana2002@gmail.com ,68,B
+161,Cyber Security,TCCS04,AT1,R.Divya Jyothi,rambatladivyajyothi@gmail.com ,89,A
+162,Cyber Security,TCCS04,AT1,Sangaraju Harika,sangarajuharika02@gmail.com ,99,A
+163,Cyber Security,TCCS04,AT1,Sayyed Moula Sharif ,Sayyedmoulasharifs677@gmail.com,45,C
+164,Cyber Security,TCCS04,AT1,Seelam Mirapakayala Vasavi,seelam.vasavi.5@gmail.com,33,C
+165,Cyber Security,TCCS04,AT1,S. Ameena Afreen,afreen25.shaik@gmail.com,47,C
+166,Cyber Security,TCCS04,AT1,Shaik Mahaboob Basha,shaikmahaboobbasha250601@gmail.com,46,C
+167,Cyber Security,TCCS04,AT1,S.Masthani,masthanishaikmasthani@gmail.com ,66,B
+168,Cyber Security,TCCS04,AT1,Siddamreddy Chandana,siddamchandana25@gmail.com,55,C
+169,Cyber Security,TCCS04,AT1,Singamsetty Lakshmicharitha,lakshmicharithas04@gmail.com,33,C
+170,Cyber Security,TCCS04,AT1,S.Pavani,somireddypallipavani@gmail.com,22,C
+171,Cyber Security,TCCS04,AT1,Sunku Venkata Mani Dhanush Kumar,sunkudhanush58@gmail.com,85,A
+172,Cyber Security,TCCS04,AT1,Sure Shanthi,sureshanthi01@gmail.com,65,B
+173,Cyber Security,TCCS04,AT1,T.Rajesh,thalarirajesh65@gmail.com,70,B
+174,Cyber Security,TCCS04,AT1,Talla Gayathri,tallagaya346@gmail.com,72,B
+175,Cyber Security,TCCS04,AT1,T.Amrusha,amrushathakkasila@gmail.com,89,A
+176,Cyber Security,TCCS04,AT1,Thathireddy Sai,thathireddysai@gmail.com,65,B
+177,Cyber Security,TCCS04,AT1,Thokala Bhanuja,bhanujathokala01@gmail.com,66,B
+178,Cyber Security,TCCS04,AT1,Uday Shankar T,udaylussy@gmail.com,68,B
+179,Cyber Security,TCCS04,AT1,Tippi Reddy Palli Narendra,naganarendra08@gmail.com,56,C
+180,Cyber Security,TCCS04,AT1,Udayagiri Ayesha,ayeshaaishu510@gmail.com,55,C
+181,Cyber Security,TCCS04,AT1,U.Saidheeraj Reddy,dheerajreddy7893@gmail.com,55,C
+182,Cyber Security,TCCS04,AT1,Pradeep Valluru,pradeepvalluru143@gmail.com,56,C
+183,Cyber Security,TCCS04,AT1,V.Sree Lalitha,vankadarisrilalitha1@gmail.com,87,A
+184,Cyber Security,TCCS04,AT1,Yerva Sowjanya,yervasowjanya79@gmail.com,65,B
+185,Cyber Security,TCCS04,AT1,A. Maruthi.Reddy,reddymaruthi42@gmail.com,66,B
+186,Cyber Security,TCCS04,AT1,Nallagondla Tarun Sai Preetam,lovelytharun23@gmail.com,78,A
+187,Cyber Security,TCCS04,AT1,Shaik Nazeerulla,ssnazeer123@gmail.com,45,C
+188,Cyber Security,TCCS04,AT1,S Rafi,singanamala@gmail.com,55,C
+189,Cyber Security,TCCS04,AT1,S.Sowgandhika ,SowgandhikaSowgandhika9@gmail.com,60,B
+190,Cyber Security,TCCS04,AT1,Syed Sana,syedsana474@gmail.com,65,B
+191,Cyber Security,TCCS04,AT1,Talari Yasho Vardhan,yashovardhan861@gmail.com,66,B
+192,Cyber Security,TCCS04,AT1,Thathireddy Bhargavi,Bhargavithathireddy@gmail.com,68,B
+193,Cyber Security,TCCS04,AT1,T Adi Kesava Reddy,thungaadhi12@gmail.com,56,C
+194,Cyber Security,TCCS04,AT1,Shaik Mohammed ,Sm848494@gmail.com,55,C
+195,Cyber Security,TCCS04,AT1,Niharika,athikariniharika@gmail.com,55,C
+196,Cyber Security,TCCS04,AT1,Agraharam Sripriya Keerthana,keerthanaagraharam@gmail.com,56,C
+197,Cyber Security,TCCS04,AT1,Teja Sree,Tejasreemuddhubangaru12@gmail.com,87,A
+198,Cyber Security,TCCS04,AT1,Sivaram,balipogusivaram@gmail.com,85,A
+199,Cyber Security,TCCS04,AT1,Banda Vasanthi ,bandavasanthi2000@gmail.com,65,B
+200,Cyber Security,TCCS04,AT1,Bandi.Sai Prathap Reddy,saiprathap559@gmail.com,70,B
+201,Cyber Security,TCCS04,AT1,Bhumireddy Avanthika,jyothiavanthika47@gmail.com,72,B
+202,Cyber Security,TCCS04,AT1,Bodela Manasa,manasareddy5652@gmail.com,89,A
+203,Cyber Security,TCCS04,AT1,Challa.Pranitha Reddy,challa.pranithareddy2001@gmail.com,90,A
+204,Cyber Security,TCCS04,AT1,Challa Pravallika,pravallikachalla123@gmail.com,95,A
+205,Cyber Security,TCCS04,AT1,Chilekampalli Laxmi Sai Prasanna,saichitraju2213@gmail.com,96,A
+206,Cyber Security,TCCS04,AT1,Sai Sandesh Reddy,Saisandeshreddy513@gmail.com,97,A
+207,Cyber Security,TCCS04,AT1,Chintha Joggari Varun Reddy,varun000reddy@gmail.com,66,B
+208,Cyber Security,TCCS04,AT1,Chitraju Girish Kumar Raju,cgirishraju12243@gmail.com,68,B
+209,Cyber Security,TCCS04,AT1,Chitturu Vasanthi,vasanthi.c2707@gmail.com,56,C
+210,Artificail Intelligence,TCAI05,AT1,Dadireddy Sandhya,dadireddysandhya@gmail.com,55,C
+211,Artificail Intelligence,TCAI05,AT1,Kasturi Depani,kasturidepani@gmail.com,55,C
+212,Artificail Intelligence,TCAI05,AT1,Renuka Reddy Devara,renukareddydevara@gmail.com,56,C
+213,Artificail Intelligence,TCAI05,AT1,Devaracondu Brunda Sai,brundasai2000@gmail.com,87,A
+214,Artificail Intelligence,TCAI05,AT1,D.Likhitha,likhitha1602@gmail.com,85,A
+215,Artificail Intelligence,TCAI05,AT1,Duddikunta Lakshmi Prasuna Reddy,prasunaasvck@gmail.com,65,B
+216,Artificail Intelligence,TCAI05,AT1,E Sai Likhita Reddy,sailikhitareddy@gmail.com,70,B
+217,Artificail Intelligence,TCAI05,AT1,Tejaswini Eragam Reddy,tejaswinireddy.e87@gmail.com,72,B
+218,Artificail Intelligence,TCAI05,AT1,Lakshmi Devi Erangam Reddy,lakshmidevilakshmi576@gmail.com,89,A
+219,Artificail Intelligence,TCAI05,AT1,Akshharaa,akshharaareddy@gmail.com,90,A
+220,Artificail Intelligence,TCAI05,AT1,G.Gurupavan,gurupavandevil@gmail.com,95,A
+221,Artificail Intelligence,TCAI05,AT1,G.Pranavi ,gaddampranavi14@gmail.com,96,A
+222,Artificail Intelligence,TCAI05,AT1,G.V. Yashaswi,yashugadela@gmail.com,97,A
+223,Artificail Intelligence,TCAI05,AT1,G.Sudeepthi ,gandlasudeepthi1@gmail.com,66,B
+224,Artificail Intelligence,TCAI05,AT1,Gangireddy Lakshmi Deepthi,gangireddydeepthi150@gmail.com,68,B
+225,Artificail Intelligence,TCAI05,AT1,G.Susmitha,susmithareddysusi@gmail.com,97,A
+226,Artificail Intelligence,TCAI05,AT1,Vishnu Vardhan Reddy,vishnuvasu81@gmail.com,45,C
+227,Artificail Intelligence,TCAI05,AT1,Guthireddy Sravanthi ,Sravanthigutireddy@gmail.com,55,C
+228,Artificail Intelligence,TCAI05,AT1,Ija Havila,ija.havila12@gmail.com,60,B
+229,Artificail Intelligence,TCAI05,AT1,Bhavana,bhavanabhanu.j888@gmail.com,65,B
+230,Artificail Intelligence,TCAI05,AT1,Rishitha,rishithacse.2001@gmail.com,66,B
+231,Artificail Intelligence,TCAI05,AT1,Sanath Kumar Reddy,sanathreddy20@gmail.com,68,B
+232,Artificail Intelligence,TCAI05,AT1,Anitha ,bandianitha2001@gmail.com,56,C
+233,Artificail Intelligence,TCAI05,AT1,Kesari Reddy Sindhusai ,Sindhusai0900143@gmail.com,55,C
+234,Artificail Intelligence,TCAI05,AT1,Koduru Anupama ,anukoduru20@gmail.com,55,C
+235,Artificail Intelligence,TCAI05,AT1,Sai Lakshmi Narasimha Priya,priyakolaparthy@gmail.com,56,C
+236,Artificail Intelligence,TCAI05,AT1,K. Deepika Sai,Kosurudeepika26@gmail.com,87,A
+237,Artificail Intelligence,TCAI05,AT1,K. Rajkumar ,Rajkumarroyal341@gmail.com,65,B
+238,Artificail Intelligence,TCAI05,AT1,Kuluru Sivamani,ksivamani1523@gmail.com,66,B
+239,Artificail Intelligence,TCAI05,AT1,K.Sunay Kumar,Kunjetisunay@gmail.com,78,A
+240,Artificail Intelligence,TCAI05,AT1,K. Susmitha. ,Kunjetisusmitha@gmail.com,88,A
+241,Artificail Intelligence,TCAI05,AT1,Pravallika Kurnuthala,pravali0120@gmail.com,49,C
+242,Artificail Intelligence,TCAI05,AT1,Madhullapalli Tejaswini,mvtejaswini45@gmail.com,70,B
+243,Artificail Intelligence,TCAI05,AT1,Makam Raghadeeksha,deeksha.ragha06@gmail.com,50,C
+244,Artificail Intelligence,TCAI05,AT1,M.Charishma,cherrymarripati@gmail.com,56,C
+245,Artificail Intelligence,TCAI05,AT1,M.Vishnu Vardhan,vishnuvardhan1017@gmail.com,10,C
+246,Artificail Intelligence,TCAI05,AT1,M. Divya,Machupallidivyareddy333@gmail.com,36,C
+247,Artificail Intelligence,TCAI05,AT1,Meegada Bhavan Kumar Reddy,bhavankumarreddymeegada2001@gmail.com,66,B
+248,Artificail Intelligence,TCAI05,AT1,Mogal Tabasum ,mogaltabasum456@gmail.com,78,A
+249,Artificail Intelligence,TCAI05,AT1,Ruchitha,ruchithareddy509@gmail.com,88,A
+250,Artificail Intelligence,TCAI05,AT1,Mothukuri Venkata Tharun Kumar,venkattharunkumar@gmail.com,49,C
+251,Artificail Intelligence,TCAI05,AT1,Mukkanti Jayanth,jayanthmukkanti@gmail.com,70,B
+252,Artificail Intelligence,TCAI05,AT1,Mundla Ganesh Reddy,mundlaganeshreddy@gmail.com,50,C
+253,Artificail Intelligence,TCAI05,AT1,M. Bhavana,bhavs562@gmail.com,56,C
+254,Artificail Intelligence,TCAI05,AT1,N.Himabindhu,bindhuhima759@gmail.com,10,C
+255,Artificail Intelligence,TCAI05,AT1,Nitesh Tadikonda,nitesh709595@gmail.com,36,C
+256,Artificail Intelligence,TCAI05,AT1,O.Yaswanth Reddy,Yaswanthreddyonteddu@gmail.com,65,B
+257,Artificail Intelligence,TCAI05,AT1,Panathula Shriya,shriya1411.p@gmail.com,70,B
+258,Artificail Intelligence,TCAI05,AT1,P.Tanusha,saitanusha0@gmail.com,72,B
+259,Artificail Intelligence,TCAI05,AT1,Pathakunta Hemanth Reddy,hemanthreddy200106@gmail.com,89,A
+260,Artificail Intelligence,TCAI05,AT1,P.Sai Tejaswini,saitejeswinipattem@gmail.com,65,B
+261,Artificail Intelligence,TCAI05,AT1,P Ganakuber,ganakuber009@gmail.com,66,B
+262,Artificail Intelligence,TCAI05,AT1,Peram Sai Triveni,saitriveni2000@gmail.com,68,B
+263,Artificail Intelligence,TCAI05,AT1,Jashwanth,jashjashwanth15@gmail.com,56,C
+264,Artificail Intelligence,TCAI05,AT1,P.Swetha Reddy,pothuswetha4@gmail.com,55,C
+265,Machine Learning,TCML06,AT1,Pottapegula Sunil ,pottapegula@gmail.com,55,C
+266,Machine Learning,TCML06,AT1,Pottipati Kavya Shree Reddy,hkavya2455@gmail.com,56,C
+267,Machine Learning,TCML06,AT1,Pulimi Keerthan Kumar ,Keerthankumar308@gmail.com,87,A
+268,Machine Learning,TCML06,AT1,R. Deepthi Reddy,deepthirs07@gmail.com,65,B
+269,Machine Learning,TCML06,AT1,Sampati Venkata Sirisha,sampatisirishachandra@gmail.com,66,B
+270,Machine Learning,TCML06,AT1,S.Manisha,satrammanisha@gmail.com,78,A
+271,Machine Learning,TCML06,AT1,Settety Navya,Navyasettetyrr10@gmail.com,45,C
+272,Machine Learning,TCML06,AT1,Shaik Fathima Nuzhat ,Sfathimanuzhat@gmail.com,55,C
+273,Machine Learning,TCML06,AT1,Shaik Gulzeba,shaikgulzeba0582@gmail.com,60,B
+274,Machine Learning,TCML06,AT1,Shaik Hafsa Nousheen,hafsanousheen798@gmail.com,65,B
+275,Machine Learning,TCML06,AT1,Shaik Jabeer Ahmed ,jabeershaik8284@gmail.com,66,B
+276,Machine Learning,TCML06,AT1,Shaik Mohammed Sameer,sameershaik76300@gmail.com,68,B
+277,Machine Learning,TCML06,AT1,Shaik Noor Ahmed,shaiknoorahmed007@gmail.com,56,B
+278,Machine Learning,TCML06,AT1,Shaik.Nuima ,snuima2001@gmail.com,55,B
+279,Machine Learning,TCML06,AT1,Shaik Shameerulla ,shameerulla.ss25@gmail.com,55,B
+280,Machine Learning,TCML06,AT1,Surapuraju Saipriya,Saipriyasurapuraju1930@gmail.com,56,B
+281,Machine Learning,TCML06,AT1,Syed. Ruhina Samreen,ruhinasamreensyed@gmail.com,87,A
+282,Machine Learning,TCML06,AT1,Thelladarala Surekha,surekhasurekha5025@gmail.com,65,B
+283,Machine Learning,TCML06,AT1,Thota Narendra ,thotanarendra246@gmail.com,66,B
+284,Machine Learning,TCML06,AT1,Uppaluru Shireesha ,shireeshareddyuppaluru@gmail.com,78,A
+285,Machine Learning,TCML06,AT1,Uppatoori Silpa,shilpajai2012@gmail.com,88,A
+286,Machine Learning,TCML06,AT1,Vallurumamaheswarrao,swamymahesh134@gmail.com,49,C
+287,Machine Learning,TCML06,AT1,Vijitha Vellala,vijithareddy0605@gmail.com,70,A
+288,Machine Learning,TCML06,AT1,Y.Aswini Reddy ,Aswini.svck@gmail.com,50,C
+289,Machine Learning,TCML06,AT1,Akshinthala Swetha ,swethaakshinthala@gmail.com,78,A
+290,Machine Learning,TCML06,AT1,A.Sunanda,annadanamsunanda288@gmail.com,88,A
+291,Machine Learning,TCML06,AT1,Avula Venkata Subbarayudu,subbusubash525@gmail.com,49,C
+292,Machine Learning,TCML06,AT1,Bandi Keerthana,bandikeerthana20@gmail.com,70,B
+293,Machine Learning,TCML06,AT1,B.Mahitha,bandimahitha735@gmail.com,50,C
+294,Machine Learning,TCML06,AT1,Bathala Pavan Sai,Pawansaisuni@gmail.com,56,C
+295,Machine Learning,TCML06,AT1,Bathala Veera Mahalakshmi,veeravishwada@gmail.com,55,C
+296,Machine Learning,TCML06,AT1,B.Sivateja,sivateja1062@gmail.com,55,C
+297,Machine Learning,TCML06,AT1,Bokkasam Jahnavi,bokkasamjahnavi@gmail.com,56,C
+298,Machine Learning,TCML06,AT1,Brahmanapalli Manoj,brahamanapallimanoj@gmail.com,87,A
+299,Machine Learning,TCML06,AT1,Bramhadandu Deepthi,deepu1692000@gmail.com,65,B
+300,Machine Learning,TCML06,AT1,Chagalamarri Charishma,chagalamarricharishma@gmail.com,66,B
+301,Machine Learning,TCML06,AT1,Chagamreddy Venkata Lasya,lasya.cv@gmail.com,78,A
+302,Machine Learning,TCML06,AT1,Challa Venkata Deepthi,deepthireddy817938@gmail.com,45,C
+303,Machine Learning,TCML06,AT1,Chilumuri Naga Subba Reddy,subbareddyr833@gmail.com,55,C
+304,Machine Learning,TCML06,AT1,D. Sumana,sumanasumana635@gmail.com,60,B
+305,Machine Learning,TCML06,AT1,Harika Devathi,devathiharika22@gmail.com,65,B
+306,Machine Learning,TCML06,AT1,Jithendra Kumar Reddy,jithu0875@gmail.com,66,B
+307,Machine Learning,TCML06,AT1,Shyam Sundar Gowd,shyamsundargowd931@gmail.com,68,B
+308,Machine Learning,TCML06,AT1,Emmidisetty Indira,indiraemmidisetty811@gmail.com,56,C
+309,Machine Learning,TCML06,AT1,Enukolu Sri Sai Krishna ,srisaikrishna629@gmail.com,55,C
+310,UX/UI,TCUI07,AT1,Epparla Jyothsna,epparlajyothsna0@gmail.com,55,C
+311,UX/UI,TCUI07,AT1,Govardhan Reddy,gajjalagovardha123@gmail.com,56,C
+312,UX/UI,TCUI07,AT1,Gandla Deeksha Sai ,gandladeekshasai2000@gmail.com,87,A
+313,UX/UI,TCUI07,AT1,Gangannagari Mounika ,gangannagarimounika425@gmail.com,85,A
+314,UX/UI,TCUI07,AT1,G. Sreeja,Sreeja0115@gmail.com,65,B
+315,UX/UI,TCUI07,AT1,Gnanagari Hemanth Kumar,hemanthroyals80@gmail.com,70,B
+316,UX/UI,TCUI07,AT1,Jaggari Raga Sai Sindhuja,sairoyal682000@gmail.com,56,C
+317,UX/UI,TCUI07,AT1,Juturu Naga Venkata Nihanth,nihanthjuturu2510@gmail.com,55,C
+318,UX/UI,TCUI07,AT1,Tejaswini ,tejaswini7062@gmail.com,55,C
+319,UX/UI,TCUI07,AT1,Kadumuri Venkata Sai Vamsi,vamsikadumurir@gmail.com,56,C
+320,UX/UI,TCUI07,AT1,K. Lakshmi Devi,kakarlalakshmi1991@gmail.com,87,A
+321,UX/UI,TCUI07,AT1,K. Siva Sahithya,sivasahithya1234@gmail.com,65,B
+322,UX/UI,TCUI07,AT1,K.Swathi,swathikancharla40@gmail.com,66,B
+323,UX/UI,TCUI07,AT1,Kanchukommala Reddy Murali Krishna,Reddymuralikrishna1432@gmail.com,78,A
+324,UX/UI,TCUI07,AT1,Kasha Sanjeeva Sampath,Sampath290501@gmail.com,45,C
+325,UX/UI,TCUI07,AT1,Naga Partha Dwaz,Kaayapatiparthu@gmail.com,55,C
+326,UX/UI,TCUI07,AT1,Kolakalapooti Sai Harish Reddy,ksharish08@gmail.com,60,B
+327,UX/UI,TCUI07,AT1,K.V Suryatejareddy,suryatejareddy79@gmail.com,65,B
+328,UX/UI,TCUI07,AT1,Kunuturu Ramana Reddy,chinnaram987@gmail.com,66,B
+329,UX/UI,TCUI07,AT1,Lakkireddy Nidhitha Reddy,nidhireddy2911@gmail.com,68,B
+330,UX/UI,TCUI07,AT1,Lomada Hymavathi,lomadahymavathi444@gmail.com,56,C
+331,UX/UI,TCUI07,AT1,Maadam Pravallika,maadampravallika63@gmail.com,55,C
+332,UX/UI,TCUI07,AT1,Machavaram Chandra Dinesh Kumar Reddy,mchandradineshkumarreddy@gmail.com,55,C
+333,UX/UI,TCUI07,AT1,Machunuru Suvarna ,Suvarnamachunuru777@gmail.com,56,C
+334,UX/UI,TCUI07,AT1,Sivapriya,msivapriya14@gmail.com,87,A
+335,UX/UI,TCUI07,AT1,Maddubaigari Mohammed Irshan,mirshan1999@gmail.com,85,A
+336,UX/UI,TCUI07,AT1,Malisetty Sai Prasanna Kumar,msai06223@gmail.com,65,B
+337,UX/UI,TCUI07,AT1,Manchala Jagadeesh,jaggubhai581@gmail.com,70,B
+338,UX/UI,TCUI07,AT1,M. Naveen Kumar,nivinroy792@gmail.com,85,A
+339,UX/UI,TCUI07,AT1,Mohammad Shaik Ibrahim Hussain,mohammadshaikibrahimhussain@gmail.com,65,B
+340,UX/UI,TCUI07,AT1,Musali Sruthi Reddy,sruthimusali2000@gmail.com,70,B
+341,UX/UI,TCUI07,AT1,Nagella Gowthami,nagellagowthami2k00@gmail.com,72,B
+342,UX/UI,TCUI07,AT1,N. Sanghavi,sanghavireddy4627@gmail.com,89,A
+343,UX/UI,TCUI07,AT1,N. Murali Mohan,muralimohannunna66@gmail.com,90,A
+344,UX/UI,TCUI07,AT1,Obulsetty Viswa Priya,viswapriya0000@gmail.com,95,A
+345,UX/UI,TCUI07,AT1,P.Nagarjuna,paladugunagarjuna68@gmail.com,96,A
+346,UX/UI,TCUI07,AT1,Palem Bhavani Sravan,pbhavanisravan8513@gmail.com,97,A
+347,UX/UI,TCUI07,AT1,P.Sahithi Priya,sahithipriya253@gmail.com,45,C
+348,UX/UI,TCUI07,AT1,Patan Muhammed Shuaib Khan,Pathanshuaibkhan1234@gmail.com,55,C
+349,UX/UI,TCUI07,AT1,Pennabadi Hima Bindu,pennabadihimabindu@gmail.com,60,B
+350,UX/UI,TCUI07,AT1,Anusha,Ponnaanusha6@gmail.com,65,B
+351,UX/UI,TCUI07,AT1,Naga Parvathi,prodduturunagaparvathi@gmail.com,66,B
+352,UX/UI,TCUI07,AT1,P.Sushma,Punnelasushma2001@gmail.com,68,B
+353,UX/UI,TCUI07,AT1,P. Veera Narayana Reddy,putluruveeranarayanareddy123@gmail.com,97,A
+354,UX/UI,TCUI07,AT1,Puttu Lokesh Babu ,lokeshputtu8@gmail.com,45,C
+355,UX/UI,TCUI07,AT1,Rajampalli Jyoshna ,jyoshnarajampalli@gmail.com,55,C
+356,UX/UI,TCUI07,AT1,Sambaturi Madhavi,sambaturimadhavi@gmail.com,60,B
+357,UX/UI,TCUI07,AT1,S.Bhavana,bhavanasanepalli@gmail.com,65,B
+358,UX/UI,TCUI07,AT1,S. Chandu,chandusapparapu123@gmail.com,66,B
+359,UX/UI,TCUI07,AT1,Shaik Jabeer Hussain ,shaikjabeer964@gmail.com,68,B
+360,UX/UI,TCUI07,AT1,Shaik Rasheed,shaik.rasheedkhalid@gmail.com,56,C
+361,UX/UI,TCUI07,AT1,Shaik Safihya Anjum,safihyaanjum7992@gmail.com,55,C
+362,UX/UI,TCUI07,AT1,Shaik Taskeen Begum,shaiktaskeen02@gmail.com,55,C
+363,UX/UI,TCUI07,AT1,Siga Karthik ,Sigakarthikroyal@gmail.com,56,C
+364,UX/UI,TCUI07,AT1,S.Sivateja,sivateja27300@gmail.com,87,A
+365,UX/UI,TCUI07,AT1,Sunkara Sivasai,sivasailucky1431@gmail.com,65,B
+366,UX/UI,TCUI07,AT1,Sunkari Lakshmi Narasimha Madhav,slnmadhav811@gmail.com,66,B
+367,UX/UI,TCUI07,AT1,Jhansi ,jhansi2063@gmail.com,78,A
+368,UX/UI,TCUI07,AT1,Syed Mohammed Tousif,tausifsyed335@gmail.com,88,A
+369,UX/UI,TCUI07,AT1,Syed Shahida Parveen ,ssparveen.2001@gmail.com,49,C
+370,UX/UI,TCUI07,AT1,Tangella Hemika,hemikasumam@gmail.com,70,B
+371,UX/UI,TCUI07,AT1,Tappeta Jeevan Reddy,tjeevanreddy3@gmail.com,50,C
+372,UX/UI,TCUI07,AT1,T. Deepika ,deepikatnani@gmail.com,56,C
+373,UX/UI,TCUI07,AT1,Thadigotla Veera Rakesh Reddy,veerarakeshreddy2001@gmail.com,56,C
+374,UX/UI,TCUI07,AT1,Thangella Praveen Kumar,praveenthangella25@gmail.com,87,A
+375,UX/UI,TCUI07,AT1,Turaka Ashok Kumar,turakahemavathi1234@gmail.com,65,B
+376,UX/UI,TCUI07,AT1,U. Priyanka,Priyankautukuru@gmail.com,66,B
+377,UX/UI,TCUI07,AT1,Vaddamani Chandana,vaddamanichandana@gmail.com,78,A
+378,UX/UI,TCUI07,AT1,V.Venkata Ananya,velpucherlavenkataananya@gmail.com,88,A
+379,UX/UI,TCUI07,AT1,Vemi Reddy Siva Reddy,Vmsreddy2001@gmail.com,49,C
+380,UX/UI,TCUI07,AT1,V.Mohammed Nihaz,mdnihaz123@gmail.com,70,B
+381,UX/UI,TCUI07,AT1,Vorsu Umamahesh ,maheshbangaram0726@gmail.com,50,B
+382,UX/UI,TCUI07,AT1,Yadati Vishnu Teja,vishnuteja2059@gmail.com,56,B
+383,UX/UI,TCUI07,AT1,Yadavalli Deepna Varma,deepnavarma2001@gmail.com,56,B
+384,UX/UI,TCUI07,AT1,Yakkali Mahalakshmi,yakkalimahalakshmi3909@gmail.com,87,A
+385,UX/UI,TCUI07,AT1,Akhil Chaithanya,akhibruce@gmail.com,65,B
+386,UX/UI,TCUI07,AT1,Venkataswamireddy,venkataswamireddy143@gmail.com,66,B
+387,UX/UI,TCUI07,AT1,Bandaru Sai Prasanna,prasannabandaru99@gmail.com,78,A
+388,UX/UI,TCUI07,AT1,Bathena Dinesh Naik,dinesh905959@gmail.com,88,A
+389,UX/UI,TCUI07,AT1,Juturu Saikrupa,saikrupajuturu20@gmail.com,49,C
+390,UX/UI,TCUI07,AT1,K. Vijaykumar,Vijaykumarprem1707@gmail.com,70,B
+391,UX/UI,TCUI07,AT1,Sai Tejaswi,kantasaiteja2000@gmail.com,50,C
+392,UX/UI,TCUI07,AT1,K.Venkatasai Kumar ,Kotapativenkatasai450@gmail.com,56,C
+393,UX/UI,TCUI07,AT1,Mopuri Thriveni,mopurithriveni436@gmail.com,44,C
+394,UX/UI,TCUI07,AT1,Shaik Abdul Razak,abrazak172@gmail.com,78,A

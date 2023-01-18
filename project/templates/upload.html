@@ -1,0 +1,91 @@
+{%extends 'home.html'%}
+{%load static%}
+{%block body %}
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a style="text-decoration: none;" href="single_upload"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Single Upload </button></a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a style="text-decoration: none;" href="entire_upload"><button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Entire Upload</button></a>
+    </li>
+  </ul>
+<!-- {%if user.is_authenticated%}
+<table align="center">
+	<tr>
+		<td>
+			<div>
+				<center>
+					<h2>enter single person value</h2>
+				</center>
+				<center>
+					<form action="single_upload" method="POST">
+						{% csrf_token %}
+						<div class="form-floating">
+							<input type="text" class="form-control" id="floatingPassword" placeholder="course name" name="course_name">
+							<label for="floatingPassword">course name</label>
+						  </div>
+						  <div class="form-floating">
+							<input type="text" class="form-control" id="floatingPassword" placeholder="course id" name="course_id">
+							<label for="floatingPassword">course id</label>
+						  </div>
+						  <div class="form-floating">
+							<input type="text" class="form-control" id="floatingPassword" placeholder="attempted id" name="attempted_id">
+							<label for="floatingPassword">attempted id</label>
+						  </div>
+						  <div class="form-floating">
+							<input type="text" class="form-control" id="floatingPassword" placeholder="course Rollno" name="cand_name">
+							<label for="floatingPassword">course Rollno</label>
+						  </div>
+						  <div class="form-floating mb-3">
+							<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="cand_email">
+							<label for="floatingInput">Email address</label>
+						  </div>
+						  <div class="form-floating">
+							<input type="text" class="form-control" id="floatingPassword" placeholder="marks" name="marks">
+							<label for="floatingPassword">marks</label>
+						  </div>
+						  <div class="form-floating">
+							<input type="text" class="form-control" id="floatingPassword" placeholder="grade" name="grade">
+							<label for="floatingPassword">grade</label>
+						  </div>
+
+						<center><button type="submit" class="btn btn-primary">submit</button></center>
+					</form>
+				</center>
+			</div>
+		</td>
+		<td>
+			<div>
+				<center>
+					<h2 color="red">OR upload a file of Format</h2>
+				</center>
+
+				<center>
+					<h3 color="blue">course_name,course_id,attempted_id,cand_name,cand_email,marks,grade</h3>
+				</center>
+				<div>
+					<center>
+						<form action="retrieve" method="post" enctype="multipart/form-data">
+							{% csrf_token %}
+							<div class="mb-3">
+								<label for="formFile" class="form-label">Select the file</label>
+								<input class="form-control" type="file" id="formFile" name="myfile">
+							</div>
+							<center><button type="submit" class="btn btn-primary">submit</button></center>
+						</form>
+					</center>
+				</div>
+		</td>
+	</tr>
+	<br><br>
+</table>
+{%else%}
+<h2>else</h2>
+{%endif%} -->
+
+<div>
+	{%for m in messages%}
+	<h3>{{m}}</h3>
+	{%endfor%}
+</div>
+{%endblock%}

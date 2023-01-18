@@ -2,62 +2,6 @@
 {% block body%}
 {%load static%}
 
-	{%if user.is_authenticated%}
-	<table align="center">
-		<tr>
-		<td>
-		<div>
-		<center><h2 color="red">enter single person value</h2></center>
-		<center>
-			<form action="single_upload" method="POST">
-				{% csrf_token %}
-				<center>course_name:<input type="text" class="mani" placeholder="course_name" name="course_name"></center>
-				<center>course_id:<input type="text" class="mani" placeholder="course_id" name="course_id"></center>
-				<center>attempted_id:<input type="text" class="mani" placeholder="attempted_id" name="attempted_id"></center>
-				<center>cand_RollNo:<input type="text" class="mani" placeholder="cand_name" name="cand_name"></center>
-				<center>cand_email:<input type="email" class="mani" placeholder="cand_email" name="cand_email"></center>
-				<center>marks:<input type="text" class="mani" placeholder="marks" name="marks"></center>
-				<center>grade:<input type="text" class="mani" placeholder="grade" name="grade"></center>
-				
-				<center><input type="submit" name="ghj"></center>
-			</form>
-		</center>
-		</div>
-		</td>
-		<td>
-		<div>
-		<center><h2 color="red">OR upload a file of Format</h2></center>
+<h2>This is the site that Analyse the student data and improve there performance</h2>
 
-		<center><h3 color="blue">course_name,course_id,attempted_id,cand_name,cand_email,marks,grade</h3></center>
-		<div>	
-		<center><form action="retrieve" method="post" enctype="multipart/form-data">
-		{% csrf_token %}
-		Select a file:<br><br>
-		<input type="file" id="myfile" name="myfile"><br><br>
-		<input type="submit">
-		</form></center>
-		</div>
-		</td>
-		</tr>
-		<br><br>
-	</table>
-
-	<div>
-        {%for m in messages%}
-            <h3>{{m}}</h3>
-        {%endfor%}
-    </div>
-
-	 {%else%}
-
-	<center><h3 color="blue">Lets do tym pass till you login</h3></center>
-	<center><h4>let us add two numbers</h4></center>
-	<center><form action="add" method="post">
-		{% csrf_token %}
-		1st numb:<input type="text" name="num1"><br>
-		2st numb:<input type="text" name="num2"><br>
-		<input type="submit">
-	</form></center>
-	{%endif%}
 {% endblock%}
-
