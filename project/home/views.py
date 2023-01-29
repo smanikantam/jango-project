@@ -10,9 +10,18 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import pandas as pd
 import joblib
+from django.db.models import Q
+from sklearn.neighbors import KNeighborsClassifier
 dic={0:'very poor',1:'poor',2:'average',3:'good',4:'very good'}
-todo_category={'programing':['basics python','basics c','basics c++','basics java'],'practical':['core java','basic sql','DBMS','transaction'],'thearitical':['science','chemistry','mathematics']}
-todo_subjects={'python':'programing','sql':'practical','c':'programing','physics':'thearitical','SQL':'practical'}
+todo_category={'programing':['basics python','basics c','basics c++','basics java'],
+               'Database Management Systems':['mySQL','NoSQL','MongoDB'],
+               'Cryptography':['Symmetric key algorithms','Asymmetric key algorithms','Cryptographic protocols:','Quantum Cryptography'],
+               'Information Security':['Network Security','Cryptography','Cloud Security'],
+               'Artificial Intelligence':['Data Science','Data Mining','Machine Learning','Deep Learning'],
+               'Machine Learning':['Python','Data Science','Data Mining'],
+               'Graphic Design':['Adobe Creative Suite','Affinity Designer','Blender']}
+todo_subjects={'Core JAVA':'programing','SQL':'Database Management Systems', 'Blockchain':'Cryptography', 'Cyber Security':'Information Security',
+              'Artificail Intelligence':'Artificial Intelligence', 'Machine Learning':'Machine Learning', 'UX/UI':'Graphic Design'}
 def home(request):
 	return render(request,'file.html',{'name':'mani'})
 def add(request):
@@ -68,9 +77,6 @@ def retrieve(request):
 		messages.info(request,name)
 		data=pd.read_excel("media/"+f.name)
 		data.to_csv("media/data.csv")
-		# x=data.iloc[:,:-1]
-		# y=data.iloc[:,-1]
-		# x.to_csv("media/savedcsv1.csv")
 		for i in range(len(data)):
 			std=student()
 			for r in range(len(data.iloc[0,:])):
@@ -114,22 +120,6 @@ def search(request):
 
 def find(request):
 	if(request.method=='POST'):
-		# dic={0:'very poor',1:'poor',2:'average',3:'good',4:'very good'}
-		# res={}
-		# name=request.POST['name']
-		# all_names=student.objects.all()
-		# show=True
-		# loaded_model = joblib.load("media/analysis_d.sav")
-		# for i in all_names:
-		# 	if(str(i.cand_name)==str(name)):
-		# 		temp=np.array(i.marks).reshape(-1,1)
-		# 		analysis_det=loaded_model.predict(temp)
-		# 		res[str(i.course_name)]=dic[int(analysis_det)]
-		# lis1=res.values()
-		# lis2=res.keys()
-		# l=zip(lis1,lis2)
-		# for i,j in zip(lis1,lis2):
-		# 	print(i,j)
 		return render(request,"search.html")
 	else:
 		return redirect("/")
@@ -271,10 +261,13 @@ def entire_upload(request):
 	else:
 		return render(request,'entire_upload.html')
 def todo_list(request):
+	all_course=student.objects.values_list("course_name")
+	all_course=[str(x)[2:-3] for x in pd.Series(all_course).unique()]
 	if(request.method == 'POST'):
 		global dic,todo_subjects,todo_category
 		rollno=request.POST['rollno']
-		std=student.objects.filter(cand_name=rollno).values()
+		course=request.POST['course']
+		std=student.objects.filter(Q(cand_name=rollno) & Q(course_name=course)).values()
 		loaded_model = joblib.load("media/analysis_d.sav")
 		poor_student_list={}
 		for i in std:
@@ -282,9 +275,25 @@ def todo_list(request):
 			analysis_det=loaded_model.predict(temp)
 			if(int(analysis_det)<3):
 				poor_student_list[str(i['course_name'])]=dic[int(analysis_det)]
-		return render(request,'todo_list.html',{'poor_student_list':poor_student_list,'rollno':rollno,'todo_category':todo_category,'todo_subjects':todo_subjects})
+		subjects=list(todo_subjects.keys())
+		categories=list(todo_subjects.values())
+		x=[]
+		y=[]
+		for i,sub in enumerate(subjects):
+			x.append(i)
+		for i,cat in enumerate(categories):
+			y.append(i)
+		classes=np.arange(len(categories))
+		pair=np.array(y).reshape(-1,1)
+		knn = KNeighborsClassifier(n_neighbors=1)
+		knn.fit(pair, classes)
+		new_x = subjects.index(course)
+		new_point = np.array(new_x).reshape(-1,1)
+		prediction = knn.predict(new_point)
+		todo_subject_list=todo_category[categories[int(prediction)]]
+		return render(request,'todo_list.html',{'poor_student_list':poor_student_list,'rollno':rollno,'todo_category':todo_category,'todo_subjects':todo_subjects,"details_course":all_course,'todo_subject_list':todo_subject_list})
 	else:
-		return render(request,'todo_list.html')
+		return render(request,'todo_list.html',{"details_course":all_course})
 def check_progress(request):
 	if(request.method == 'POST'):
 		var=request.POST['check']
@@ -309,7 +318,15 @@ def partners(request):
 				poor_std.append(i.cand_name)
 			if(int(analysis_det)>=3 and i.course_name==course):
 				clev_std.append(i.cand_name)
+			global partners_list_df
 			partners_list=zip(poor_std,clev_std)
+			if(len(clev_std)==len(poor_std)):
+				partners_list_df=pd.DataFrame({'poor':poor_std,'good':clev_std})
+			elif(len(clev_std)>len(poor_std)):
+				partners_list_df=pd.DataFrame({'poor':poor_std,'good':clev_std[:len(poor_std)]})
+			elif(len(clev_std)<len(poor_std)):
+				partners_list_df=pd.DataFrame({'poor':poor_std[:len(clev_std)],'good':clev_std})
+			partners_list_df.to_csv("media/partners_list_df.csv")
 		return render(request,'partners.html',{'partners_list':partners_list,'details_course':all_course})
 	else:
 		all_course=student.objects.values_list("course_name")
