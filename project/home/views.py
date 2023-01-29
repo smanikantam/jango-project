@@ -291,6 +291,7 @@ def todo_list(request):
 		new_point = np.array(new_x).reshape(-1,1)
 		prediction = knn.predict(new_point)
 		todo_subject_list=todo_category[categories[int(prediction)]]
+		print(todo_subject_list)
 		return render(request,'todo_list.html',{'poor_student_list':poor_student_list,'rollno':rollno,'todo_category':todo_category,'todo_subjects':todo_subjects,"details_course":all_course,'todo_subject_list':todo_subject_list})
 	else:
 		return render(request,'todo_list.html',{"details_course":all_course})
