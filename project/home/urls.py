@@ -15,5 +15,7 @@ urlpatterns=[
 	path('entire_upload',views.entire_upload,name='entire_upload'),
 	path('todo_list',views.todo_list,name='todo_list'),
 	path('check_progress',views.check_progress,name='check_progress'),
-	path('partners',views.partners,name='partners')
+	path('partners',views.partners,name='partners'),
+	path('delete_all',views.delete_all,name='delete_all'),
+	path('update_progress_score',views.update_progress_score,name='update_progress_score')
 ]

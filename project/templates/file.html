@@ -8,7 +8,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body>
+<body onload="update()">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -24,10 +24,11 @@
                     </div>
                     <div class="panel-body">
                         <p>Class Progress:</p>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-                                40%
+                        <div class="progress" style="color: black; font-size:smaller;">
+                            <div class="progress-bar progress-bar-success" id="overal_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
+                                
                             </div>
+                            {{total_progress}}%
                         </div>
                     </div>
                 </div>
@@ -43,7 +44,7 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Best Student Performance</h3>
+                        <h3 class="panel-title">Student improving Performance</h3>
                     </div>
                     <div class="panel-body">
                         <table class="table table-striped">
@@ -53,18 +54,28 @@
                                     <th>Score</th>
                                 </tr>
                             </thead>
+                            {%for i,j in all_obj%}
                             <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{i}}</td>
+                                    <td>{{j}}</td>
                                 </tr>
                             </tbody>
+                            {%endfor%}
                         </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function update(){
+            var progress="{{total_progress}}"
+            console.log(progress)
+            document.getElementById('overal_progress').style.width = progress + "%";
+            progressBar.setAttribute("aria-valuenow", progress);
+        }
+    </script>
 </body>
 </html>
 

@@ -100,6 +100,12 @@
                 </td>
             </tr>
             {%endfor%}
+
+
+            
+
+
+
             <script>
                 //for specific progress bar
                 function progressupdate(subject) {
@@ -164,10 +170,20 @@
                     var progress = (checked / total) * 100;
                     progressBar.style.width = progress + "%";
                     progressBar.setAttribute("aria-valuenow", progress);
+                    var name="{{rollno}}"
+                    document.getElementById('name').value=name
+                    document.getElementById('score').value=progress
+                    //document.getElementById('score-form').submit();
                 }
             </script>
         </tbody>
 
     </table>
+    <form class="container" action="update_progress_score" method="post" id="score-form">
+        <input type="hidden" id="name" name="name">
+        <input type="hidden" id="score" name="score">
+        <button type="submit" class="btn btn-primary" id="score_btt">submit</button>
+    </form>
 </div>
+
 {%endblock%}

@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.models import User,auth
 from django.core.files.storage import default_storage
-from .models import retrieve_file,student
+from .models import retrieve_file,student,dashboard
 from django.core.files.storage import FileSystemStorage
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
@@ -24,19 +24,27 @@ todo_subjects={'Core JAVA':'programing','SQL':'Database Management Systems', 'Bl
               'Artificail Intelligence':'Artificial Intelligence', 'Machine Learning':'Machine Learning', 'UX/UI':'Graphic Design'}
 def poor_good_std():
 	std=student.objects.all()
+	loaded_model = joblib.load("media/analysis_d.sav")
 	poor=[]
 	good=[]
 	for i in std:
 		temp=np.array(i.marks).reshape(-1,1)
 		analysis_det=loaded_model.predict(temp)
 		if(int(analysis_det)<3):
-			poor.append(i)
+			poor.append(i.cand_name)
 		else:
-			good.append(i)
+			good.append(i.cand_name)
 	return poor,good
 
 def home(request):
-	return render(request,'file.html',{'name':'mani'})
+	db=dashboard.objects.all()
+	all_obj=[[x.cand_name,x.progress_score] for x in db]
+	poor,good=poor_good_std()
+	poor_lenght=len(poor)
+	print(poor_lenght)
+	total_progress=(sum([x.progress_score for x in db])/poor_lenght)
+	print(round(total_progress,3))
+	return render(request,'file.html',{'all_obj':all_obj,"total_progress":round(total_progress,3)})
 def login(request):
 	if(request.method == 'POST'):
 		username=request.POST['UName']
@@ -299,6 +307,32 @@ def partners(request):
 		all_course=student.objects.values_list("course_name")
 		all_course=[str(x)[2:-3] for x in pd.Series(all_course).unique()]
 		return render(request,'partners.html',{'details_course':all_course})
+
+def delete_all(request):
+	if(request.method == 'POST'):
+		std=student.objects.all().delete()
+		print("deleted")
+
+		return redirect("settings")
+	else:
+		return redirect("settings")
+
+def update_progress_score(request):
+	if(request.method=='POST'):
+		db=dashboard()
+		db_names=dashboard.objects.all()
+		all_names=[x.cand_name for x in db_names]
+		name=request.POST['name']
+		score=int(float(request.POST['score']))
+		if(name in all_names):
+			upd=dashboard.objects.filter(Q(cand_name=name)).update(progress_score=score)
+		else:
+			db.cand_name=name
+			db.progress_score=score
+			db.save()
+		return redirect("todo_list")
+	else:
+		return redirect("todo_list")
 
 # offer =request.POST.get('offer',False)
 

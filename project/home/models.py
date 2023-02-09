@@ -18,7 +18,8 @@ class retrieve_file(models.Model):
         name=myfile.save(name,content)
         return myfile.url(name)
 
-# class dashboard(models.Model):
-#     cand_name=models.CharField(max_length=50)
-#     checkbox=models.BooleanField(default=False)
+class dashboard(models.Model):
+    cand_name=models.CharField(max_length=50)
+    progress_score=models.IntegerField()
+    # checkbox=models.BooleanField(default=False)
 
