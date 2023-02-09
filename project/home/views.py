@@ -22,13 +22,21 @@ todo_category={'programing':['basics python','basics c','basics c++','basics jav
                'Graphic Design':['Adobe Creative Suite','Affinity Designer','Blender']}
 todo_subjects={'Core JAVA':'programing','SQL':'Database Management Systems', 'Blockchain':'Cryptography', 'Cyber Security':'Information Security',
               'Artificail Intelligence':'Artificial Intelligence', 'Machine Learning':'Machine Learning', 'UX/UI':'Graphic Design'}
+def poor_good_std():
+	std=student.objects.all()
+	poor=[]
+	good=[]
+	for i in std:
+		temp=np.array(i.marks).reshape(-1,1)
+		analysis_det=loaded_model.predict(temp)
+		if(int(analysis_det)<3):
+			poor.append(i)
+		else:
+			good.append(i)
+	return poor,good
+
 def home(request):
 	return render(request,'file.html',{'name':'mani'})
-def add(request):
-	val1=int(request.POST['num1'])
-	val2=int(request.POST['num2'])
-	val=val1+val2
-	return render(request,'res.html',{'result':val})
 def login(request):
 	if(request.method == 'POST'):
 		username=request.POST['UName']
@@ -65,50 +73,6 @@ def registration(request):
 def logout(request):
 	auth.logout(request)
 	return redirect("/")
-def retrieve(request):
-	if(request.method == 'POST'):
-		# creating the obect for student
-		std=student()
-		f=request.FILES['myfile']
-		# creating an object for class retrieve_file
-		fs=retrieve_file()
-		# saving the file
-		name=fs.upload(f.name,f)
-		messages.info(request,name)
-		data=pd.read_excel("media/"+f.name)
-		data.to_csv("media/data.csv")
-		for i in range(len(data)):
-			std=student()
-			for r in range(len(data.iloc[0,:])):
-				v=0
-				std.course_name=data.iloc[i,v]
-				v+=1
-				std.course_id=data.iloc[i,v]
-				v+=1
-				std.attempted_id=data.iloc[i,v]
-				v+=1
-				std.cand_name=data.iloc[i,v]
-				v+=1
-				std.cand_email=data.iloc[i,v]
-				v+=1
-				std.marks=data.iloc[i,v]
-				v+=1
-				std.grade=data.iloc[i,v]
-				std.save()
-
-		# if(files.myfile.name.endswith('csv')):
-		# 	default_storage.save(files.myfile.name,files.myfile)
-		# 	# files.myfile.save(files.myfile.name,files.myfile,save=True)
-		# 	messages.info(request,"retrieved")
-		# 	return redirect("/")
-		# else:
-		# 	messages.info(request,"incorrect format")
-		# 	return redirect("/")
-		messages.info(request,'uploaded file successfully')
-		return render(request,'upload.html')
-	else:
-		print("not a post")
-
 def search(request):
 	# retrieving the column course from database
 	# all_course=student.objects.values_list("course_name")
@@ -116,35 +80,18 @@ def search(request):
 	# status={0:'very poor',1:'poor',2:'average',3:'good',4:'very good'}
 	# all_names=student.objects.all()
 	# details_course={"details_course":all_course,'status':status.values(),"details":all_names}
-	return render(request,"search.html")
-
-def find(request):
-	if(request.method=='POST'):
-		return render(request,"search.html")
-	else:
-		return redirect("/")
-
-def findall(request):
-	if(request.method=='POST'):
-		course=request.POST['acourse']
-		astatus=request.POST['astatus']
-		dic={0:'very poor',1:'poor',2:'average',3:'good',4:'very good'}
-		all_names=student.objects.all()
-		loaded_model = joblib.load("media/analysis_d.sav")
-		res=[]
-		for i in all_names:
-			temp=np.array(i.marks).reshape(-1,1)
-			analysis_det=loaded_model.predict(temp)
-			if(dic[int(analysis_det[0])]==astatus and i.course_name==course):
-				res.append(i.cand_name)
-		all_course=student.objects.values_list("course_name")
-		all_course=[str(x)[2:-3] for x in pd.Series(all_course).unique()]
-		all_names=student.objects.all()
-		todo_status=True
-
-		return render(request,'search.html',{'details':all_names,'res':res,'course':course,"status":dic.values,"details_course":all_course,"astatus":astatus,"todo_status":todo_status})
-	else:
-		return redirect("/")
+	details=student.objects.all()
+	loaded_model = joblib.load("media/analysis_d.sav")
+	status=[]
+	for i in details:
+		temp=np.array(i.marks).reshape(-1,1)
+		analysis_det=loaded_model.predict(temp)
+		if(int(analysis_det[0])<3):
+			status.append(True) # true if student is poor to highlight in search page
+		else:
+			status.append(False) # false if student is good
+	details=zip(details,status)
+	return render(request,"search.html",{'details':details})
 def upload(request):
 	return render(request,'upload.html')
 def profile(request):
@@ -156,20 +103,16 @@ def single_search_person(request):
 		dic={0:'very poor',1:'poor',2:'average',3:'good',4:'very good'}
 		res={}
 		name=request.POST['name']
-		all_names=student.objects.all()
-		show=True
+		all_names=student.objects.filter(Q(cand_name=name))
 		loaded_model = joblib.load("media/analysis_d.sav")
 		for i in all_names:
-			if(str(i.cand_name)==str(name)):
 				temp=np.array(i.marks).reshape(-1,1)
 				analysis_det=loaded_model.predict(temp)
 				res[str(i.course_name)]=dic[int(analysis_det)]
 		lis1=res.values()
 		lis2=res.keys()
 		l=zip(lis1,lis2)
-		# for i,j in zip(lis1,lis2):
-		# 	print(i,j)
-		return render(request,"single_search_person.html",{'details':all_names,'show':show,'name':name,'res_anal1':lis1,'res_anal2':lis2,'res':res})
+		return render(request,"single_search_person.html",{'details':all_names,'show':True,'name':name,'res_anal1':lis1,'res_anal2':lis2,'res':res})
 	else:
 		return render(request,'single_search_person.html')
 def entire_search_person(request):
@@ -190,7 +133,7 @@ def entire_search_person(request):
 		all_names=student.objects.all()
 		todo_status=True
 
-		return render(request,'entire_search_person.html',{'details':all_names,'res':res,'course':course,"status":dic.values,"details_course":all_course,"astatus":astatus,"todo_status":todo_status})
+		return render(request,'entire_search_person.html',{'details':all_names,'res':pd.Series(res).unique(),'course':course,"status":dic.values,"details_course":all_course,"astatus":astatus,"todo_status":todo_status})
 	else:
 		all_course=student.objects.values_list("course_name")
 		all_course=[str(x)[2:-3] for x in pd.Series(all_course).unique()]
@@ -211,7 +154,6 @@ def single_upload(request):
 		std.save()
 		messages.info(request,"data uploaded successfully")
 		return render(request,'single_upload.html')
-
 	else:
 		return render(request,'single_upload.html')
 def entire_upload(request):
@@ -224,11 +166,11 @@ def entire_upload(request):
 		# saving the file
 		name=fs.upload(f.name,f)
 		messages.info(request,name)
-		data=pd.read_excel("media/"+f.name)
+		if(f.name.endswith('csv')):
+			data=pd.read_csv("media/"+f.name)
+		elif(f.name.endswith('xlsx')):
+			data=pd.read_excel("media/"+f.name)
 		data.to_csv("media/data.csv")
-		# x=data.iloc[:,:-1]
-		# y=data.iloc[:,-1]
-		# x.to_csv("media/savedcsv1.csv")
 		for i in range(len(data)):
 			std=student()
 			for r in range(len(data.iloc[0,:])):
@@ -247,34 +189,16 @@ def entire_upload(request):
 				v+=1
 				std.grade=data.iloc[i,v]
 				std.save()
-
-		# if(files.myfile.name.endswith('csv')):
-		# 	default_storage.save(files.myfile.name,files.myfile)
-		# 	# files.myfile.save(files.myfile.name,files.myfile,save=True)
-		# 	messages.info(request,"retrieved")
-		# 	return redirect("/")
-		# else:
-		# 	messages.info(request,"incorrect format")
-		# 	return redirect("/")
 		messages.info(request,'uploaded file successfully')
 		return render(request,'entire_upload.html')
 	else:
 		return render(request,'entire_upload.html')
 def todo_list(request):
-	all_course=student.objects.values_list("course_name")
-	all_course=[str(x)[2:-3] for x in pd.Series(all_course).unique()]
-	if(request.method == 'POST'):
+	if(request.method=='POST'):
 		global dic,todo_subjects,todo_category
 		rollno=request.POST['rollno']
-		course=request.POST['course']
-		std=student.objects.filter(Q(cand_name=rollno) & Q(course_name=course)).values()
+		std=student.objects.filter(Q(cand_name=rollno)).values()
 		loaded_model = joblib.load("media/analysis_d.sav")
-		poor_student_list={}
-		for i in std:
-			temp=np.array(i['marks']).reshape(-1,1)
-			analysis_det=loaded_model.predict(temp)
-			if(int(analysis_det)<3):
-				poor_student_list[str(i['course_name'])]=dic[int(analysis_det)]
 		subjects=list(todo_subjects.keys())
 		categories=list(todo_subjects.values())
 		x=[]
@@ -287,14 +211,56 @@ def todo_list(request):
 		pair=np.array(y).reshape(-1,1)
 		knn = KNeighborsClassifier(n_neighbors=1)
 		knn.fit(pair, classes)
-		new_x = subjects.index(course)
-		new_point = np.array(new_x).reshape(-1,1)
-		prediction = knn.predict(new_point)
-		todo_subject_list=todo_category[categories[int(prediction)]]
-		print(todo_subject_list)
-		return render(request,'todo_list.html',{'poor_student_list':poor_student_list,'rollno':rollno,'todo_category':todo_category,'todo_subjects':todo_subjects,"details_course":all_course,'todo_subject_list':todo_subject_list})
+		todo_course={}
+		for i in std:
+			temp=np.array(i['marks']).reshape(-1,1)
+			analysis_det=loaded_model.predict(temp)
+			if(int(analysis_det)<3):
+				new_x = subjects.index(i['course_name'])
+				new_point = np.array(new_x).reshape(-1,1)
+				prediction = knn.predict(new_point)
+				todo_course[i['course_name']]=todo_category[categories[int(prediction)]]
+		print(todo_course)
+		return render(request,'todo_list.html',{'todo_course':todo_course,'rollno':rollno})
 	else:
+		all_course=student.objects.values_list("course_name")
+		all_course=[str(x)[2:-3] for x in pd.Series(all_course).unique()]
 		return render(request,'todo_list.html',{"details_course":all_course})
+# def todo_list(request):
+# 	all_course=student.objects.values_list("course_name")
+# 	all_course=[str(x)[2:-3] for x in pd.Series(all_course).unique()]
+# 	if(request.method == 'POST'):
+# 		global dic,todo_subjects,todo_category
+# 		rollno=request.POST['rollno']
+# 		course=request.POST['course']
+# 		std=student.objects.filter(Q(cand_name=rollno) & Q(course_name=course)).values()
+# 		loaded_model = joblib.load("media/analysis_d.sav")
+# 		poor_student_list={}
+# 		for i in std:
+# 			temp=np.array(i['marks']).reshape(-1,1)
+# 			analysis_det=loaded_model.predict(temp)
+# 			if(int(analysis_det)<3):
+# 				poor_student_list[str(i['course_name'])]=dic[int(analysis_det)]
+# 		subjects=list(todo_subjects.keys())
+# 		categories=list(todo_subjects.values())
+# 		x=[]
+# 		y=[]
+# 		for i,sub in enumerate(subjects):
+# 			x.append(i)
+# 		for i,cat in enumerate(categories):
+# 			y.append(i)
+# 		classes=np.arange(len(categories))
+# 		pair=np.array(y).reshape(-1,1)
+# 		knn = KNeighborsClassifier(n_neighbors=1)
+# 		knn.fit(pair, classes)
+# 		new_x = subjects.index(course)
+# 		new_point = np.array(new_x).reshape(-1,1)
+# 		prediction = knn.predict(new_point)
+# 		todo_subject_list=todo_category[categories[int(prediction)]]
+# 		print(todo_subject_list)
+# 		return render(request,'todo_list.html',{'poor_student_list':poor_student_list,'rollno':rollno,'todo_category':todo_category,'todo_subjects':todo_subjects,"details_course":all_course,'todo_subject_list':todo_subject_list})
+# 	else:
+# 		return render(request,'todo_list.html',{"details_course":all_course})
 def check_progress(request):
 	if(request.method == 'POST'):
 		var=request.POST['check']
@@ -333,6 +299,10 @@ def partners(request):
 		all_course=student.objects.values_list("course_name")
 		all_course=[str(x)[2:-3] for x in pd.Series(all_course).unique()]
 		return render(request,'partners.html',{'details_course':all_course})
+
+# offer =request.POST.get('offer',False)
+
+
 
 
 	

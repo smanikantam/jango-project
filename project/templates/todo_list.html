@@ -3,15 +3,21 @@
 {%block body%}
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
-      <a style="text-decoration: none;" href="single_search_person"><button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Single Student Search </button></a>
+        <a style="text-decoration: none;" href="single_search_person"><button class="nav-link" id="pills-home-tab"
+                data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                aria-selected="true">Single Student Search </button></a>
     </li>
     <li class="nav-item" role="presentation">
-      <a style="text-decoration: none;" href="entire_search_person"><button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Course Based Search</button></a>
+        <a style="text-decoration: none;" href="entire_search_person"><button class="nav-link" id="pills-profile-tab"
+                data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"
+                aria-controls="pills-profile" aria-selected="false">Course Based Search</button></a>
     </li>
     <li class="nav-item" role="presentation">
-        <a style="text-decoration: none;" href="todo_list"><button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Todo list</button></a>
-      </li>
-  </ul>
+        <a style="text-decoration: none;" href="todo_list"><button class="nav-link" id="pills-profile-tab"
+                data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"
+                aria-controls="pills-profile" aria-selected="false">Todo list</button></a>
+    </li>
+</ul>
 <div class="form">
     <center>
         <h2 color="red">To Do List For Poor Students</h2>
@@ -19,16 +25,15 @@
     <form action="todo_list" method="post">
         {% csrf_token %}
         <center>
-
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInput" placeholder="Rollno" name="rollno">
                 <label for="floatingInput">Rollno</label>
             </div>
-            <select class="form-select" aria-label="Default select example" name="course">
+            <!-- <select class="form-select" aria-label="Default select example" name="course">
                 {%for i in details_course%}
                 <option value="{{i}}">{{i}}</option>
                 {%endfor%}
-            </select>
+            </select> -->
             <center><button type="submit" class="btn btn-primary">submit</button></center>
         </center>
     </form>
@@ -40,90 +45,51 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">course</th>
-                <th scope="col">status</th>
             </tr>
             <tr>
                 <td colspan="3">
                     <div class="progress">
-                        <div class="progress-bar" id="progress-bar" value="{{z}}" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                        <div class="progress-bar" id="progress-bar" value="total" role="progressbar" style="width: 0%"
+                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                 </td>
             </tr>
         </thead>
         <tbody class="table-group-divider">
-            {%for psubject,status in poor_student_list.items%}
+            {%for subject,todo_subject in todo_course.items%}
             <tr>
                 <th scope="row">{{forloop.counter}}</th>
-                <td>{{psubject}}</td>
-                <td>{{status}}</td>
+                <th>{{subject}}</th>
+                <td></td>
             </tr>
+            <td colspan="3">
+                <div class="progress">
+                    <div class="progress-bar" id="{{subject}}" value="{{subject}}" role="progressbar" style="width: 0%"
+                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </td>
 
             <tr>
                 <td colspan="3">
                     <table class="table mb-0">
-                        <tbody>
-                            {%for sub in todo_subject_list%}
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="{{sub}}">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            {{sub}}
-                                        </label>
-                                    </div>
-                                </td>
-                            </tr>
+                        {%for sub in todo_subject%}
+                        <tr>
+                            <td>
+                                <div class="form-check">
 
-                            {%endfor%}
-                            
-                            <!-- {%for subject,category in todo_subjects.items%}
-                            {%if psubject == subject%}
-                            {%with var=category%}
-                            {%for k,l in todo_category.items%}
-                            {%if k == var%}
-                            {%for z in l%}
-                            <tr>
-                                <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="{{z}}">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            {{z}}
-                                        </label>
-                                    </div>
-                                </td>
-                            </tr>
+                                    <input class="form-check-input {{subject}}" type="checkbox" value="{{sub}}"
+                                        onclick="progressupdate('{{subject}}')">
 
-                            {%endfor%}
-                            {%endif%}
-                            {%endfor%}
-                            {%endwith%}
-                            {%endif%}
-                            {{break}}
-                            {%endfor%} -->
-                        </tbody>
-                        <script>
-                            var checkboxes = document.querySelectorAll('input[type=checkbox]');
-                            var progressBar = document.getElementById('progress-bar');
-                            var totalCheckboxes = checkboxes.length;
-                            var checkedCheckboxes = 0;
-                            
-                            checkboxes.forEach(function(checkbox) {
-                              checkbox.addEventListener('change', function() {
-                                if (this.checked) {
-                                  checkedCheckboxes++;
-                                } else {
-                                  checkedCheckboxes--;
-                                }
-                                updateProgress(checkedCheckboxes, totalCheckboxes);
-                              });
-                            });
-                            
-                            function updateProgress(checked, total) {
-                              var progress = (checked / total) * 100;
-                              progressBar.style.width = progress + "%";
-                              progressBar.setAttribute("aria-valuenow", progress);
-                            }
-                          </script>
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        {{sub}}
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        {%endfor%}
+
+
                         <!-- <tfoot>
                             <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="1"
                                 aria-valuemin="0" aria-valuemax="1">
@@ -134,7 +100,72 @@
                 </td>
             </tr>
             {%endfor%}
+            <script>
+                //for specific progress bar
+                function progressupdate(subject) {
+                    let progressBar = document.getElementById(subject);
+                    let checkbox_count=document.getElementsByClassName(subject).length;
+                    let checkbox=document.getElementsByClassName(subject)
+                    var checkedCheckboxes=0
+                    for(let i=0;i<checkbox_count;i++){
+                        if(checkbox[i].checked){
+                            checkedCheckboxes++;
+                        }
+                    }
+                    updateProgress(checkedCheckboxes,checkbox_count,progressBar)
+                }
 
+
+                //for total progress bar
+                var progressBars = document.getElementsByClassName("progress-bar");
+                /*for (var i = 0; i < progressBars.length; i++) {
+                    document.write(progressBars[i].id);
+                }*/
+                var total_progress_bar = progressBars[0];
+                var checkboxes = document.querySelectorAll('input[type=checkbox]');
+                var progressBar = document.getElementById('progress-bar');
+                var totalCheckboxes = checkboxes.length;
+                var checkedCheckboxes = 0;
+
+                checkboxes.forEach(function (checkbox) {
+                    checkbox.addEventListener('change', function () {
+                        if (this.checked) {
+                            checkedCheckboxes++;
+                        } else {
+                            checkedCheckboxes--;
+                        }
+                        updateProgress(checkedCheckboxes, totalCheckboxes, progressBar);
+                    });
+                });
+                /*
+                var progressBars = document.getElementsByClassName("progress-bar")
+                var checkedCheckboxes = 0;
+                var progress_count=document.getElementsByClassName("progress-bar").length-1;
+                for(let i=0;i<progress_count;i++){
+                    var checkbox_count=document.getElementsByClassName(progressBars[i+1].id).lenght-1;
+                    var progress_Bar=document.getElementById(progressBars[i+1].id);
+                    console.log(progress_Bar);
+                    console.log(progressBars[i+1].id);
+                    var check_box=document.getElementsByClassName(progressBars[i+1].id)[1].querySelectorAll('input[type=checkbox]');
+                    
+                    console.log(check_box);
+                    check_box.forEach(function(checkbox) {
+                      checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                          checkedCheckboxes++;
+                        } else {
+                          checkedCheckboxes--;
+                        }
+                        updateProgress(checkedCheckboxes, totalCheckboxes,progress_Bar);
+                      });
+                    });
+                }*/
+                function updateProgress(checked, total, progressBar) {
+                    var progress = (checked / total) * 100;
+                    progressBar.style.width = progress + "%";
+                    progressBar.setAttribute("aria-valuenow", progress);
+                }
+            </script>
         </tbody>
 
     </table>

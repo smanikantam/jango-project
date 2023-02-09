@@ -34,15 +34,15 @@
     <div>
         {%if show %}
         <h3 color="green">details of {{name}}</h3>
-        <table>
+        <table class="table">
             <th>
-            <td color="orange">course_name</td>
-            <td color="orange">course_id</td>
-            <td color="orange">attempted_id</td>
-            <td color="orange">cand_RollNo</td>
-            <td color="orange">cand_email</td>
-            <td color="orange">marks</td>
-            <td color="orange">grade</td>
+            <th color="orange">course_name</th>
+            <th color="orange">course_id</th>
+            <th color="orange">attempted_id</th>
+            <th color="orange">cand_RollNo</th>
+            <th color="orange">cand_email</th>
+            <th color="orange">marks</th>
+            <th color="orange">grade</th>
             </th>
             {% if show %}
             {% for i in details %}
@@ -63,10 +63,10 @@
         </table>
         <div>
             <h3 color="green">analysis of {{name}}</h3>
-            <table>
+            <table class="table">
                 <th>
-                <td color="orange">subject</td>
-                <td color="orange">status</td>
+                <th color="orange">subject</th>
+                <th color="orange">status</th>
                 </th>
 
                 {%for i,j in res.items%}

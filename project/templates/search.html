@@ -1,5 +1,5 @@
 {% extends 'home.html'%}
-
+{% load static%}
 {%block body%}
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -12,6 +12,44 @@
         <a style="text-decoration: none;" href="todo_list"><button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Todo list</button></a>
       </li>
   </ul>
+  <div>
+    <table class="table">
+        <th>
+        <th color="orange">course_name</th>
+        <th color="orange">course_id</th>
+        <th color="orange">attempted_id</th>
+        <th color="orange">cand_RollNo</th>
+        <th color="orange">cand_email</th>
+        <th color="orange">marks</th>
+        <th color="orange">grade</th>
+        </th>
+        {% for i,j in details %}
+        {%if j%}
+        <tr style="background-color:rgb(212, 84, 84)">
+            <td></td>
+            <td>{{i.course_name}}</td>
+            <td>{{i.course_id}}</td>
+            <td>{{i.attempted_id}}</td>
+            <td>{{i.cand_name}}</td>
+            <td>{{i.cand_email}}</td>
+            <td>{{i.marks}}</td>
+            <td>{{i.grade}}</td>
+        </tr>
+        {%else%}
+        <tr>
+            <td></td>
+            <td>{{i.course_name}}</td>
+            <td>{{i.course_id}}</td>
+            <td>{{i.attempted_id}}</td>
+            <td>{{i.cand_name}}</td>
+            <td>{{i.cand_email}}</td>
+            <td>{{i.marks}}</td>
+            <td>{{i.grade}}</td>
+        </tr>
+        {%endif%}
+        {%endfor%}
+    </table>
+  </div>
 
   
 <!-- <div style="    display: flex;
