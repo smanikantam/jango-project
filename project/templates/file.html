@@ -9,31 +9,60 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body onload="update()">
-    <div class="container">
+    <div class="container" style="width:120%">
         <div class="row">
             <div class="col-md-12">
                 <h1>Dashboard</h1>
-                <hr>
+                <br><br>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-3">
+        <div class="row" style="width:100%;">
+            <div class="col-md-3" style="display:inline-block; width:50%;border-right: solid 1px;">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Statistics</h3>
+                    <div class="panel-heading" style="padding-left: auto;">
+                        <h3 class="panel-title" style="align-items: center;"><b>Statistics</b></h3>
                     </div>
-                    <div class="panel-body">
-                        <p>Class Progress:</p>
+                    &nbsp;
+                    <div class="panel-body" style="width:100%">
+                        <b>Class Progress:</b>
                         <div class="progress" style="color: black; font-size:smaller;">
-                            <div class="progress-bar progress-bar-success" id="overal_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" >
-                                
+                            <div class="progress-bar progress-bar-success" id="overal_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                             </div>
                             {{total_progress}}%
                         </div>
                     </div>
                 </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="padding-left: auto;">
+                        <h3 class="panel-title" style="align-items: center;"><b>Analysis</b></h3>
+                    </div>
+                    <div class="panel-body">
+                    <table class="table table-striped" style="width:100%;">
+                        <tr>
+                            <th>Total Students</th>
+                            <td>{{tot_std}}</td>
+                        </tr>
+                        <tr>
+                            <th>Good Students</th>
+                            <td>{{good_std}}</td>
+                        </tr>
+                        <tr>
+                            <th>Poor Students</th>
+                            <td>{{poor_lenght}}</td>
+                        </tr>
+                        <tr>
+                            <th>Performing Student</th>
+                            <td>{{per_std}}</td>
+                        </tr>
+                        <tr>
+                            <th>Non-Performing Student</th>
+                            <td>{{non_per_std}}</td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9" style="display:inline-block; width:40%">
                 <!-- <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Recent Activity</h3>
@@ -44,9 +73,9 @@
                 </div> -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Student improving Performance</h3>
+                        <h3 class="panel-title"><b>Student improving Performance</b> </h3>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" style="overflow-y: scroll;max-height:330px">
                         <table class="table table-striped">
                             <thead>
                                 <tr>

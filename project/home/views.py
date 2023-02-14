@@ -38,13 +38,16 @@ def poor_good_std():
 
 def home(request):
 	db=dashboard.objects.all()
+	std=student.objects.all()
+	tot_std=len(std)
 	all_obj=[[x.cand_name,x.progress_score] for x in db]
+	per_std=len(all_obj)
 	poor,good=poor_good_std()
 	poor_lenght=len(poor)
 	print(poor_lenght)
 	total_progress=(sum([x.progress_score for x in db])/poor_lenght)
 	print(round(total_progress,3))
-	return render(request,'file.html',{'all_obj':all_obj,"total_progress":round(total_progress,3)})
+	return render(request,'file.html',{'all_obj':all_obj,"total_progress":round(total_progress,3),"poor_lenght":poor_lenght, "per_std":per_std,"non_per_std":poor_lenght-per_std,"tot_std":tot_std,"good_std":tot_std-poor_lenght})
 def login(request):
 	if(request.method == 'POST'):
 		username=request.POST['UName']
@@ -111,7 +114,11 @@ def single_search_person(request):
 		dic={0:'very poor',1:'poor',2:'average',3:'good',4:'very good'}
 		res={}
 		name=request.POST['name']
+		name=name.strip()
 		all_names=student.objects.filter(Q(cand_name=name))
+		for i in all_names:
+			print(i.cand_name)
+		print("done")
 		loaded_model = joblib.load("media/analysis_d.sav")
 		for i in all_names:
 				temp=np.array(i.marks).reshape(-1,1)
@@ -183,19 +190,19 @@ def entire_upload(request):
 			std=student()
 			for r in range(len(data.iloc[0,:])):
 				v=0
-				std.course_name=data.iloc[i,v]
+				std.course_name=str(data.iloc[i,v]).strip()
 				v+=1
-				std.course_id=data.iloc[i,v]
+				std.course_id=str(data.iloc[i,v]).strip()
 				v+=1
-				std.attempted_id=data.iloc[i,v]
+				std.attempted_id=str(data.iloc[i,v]).strip()
 				v+=1
-				std.cand_name=data.iloc[i,v]
+				std.cand_name=str(data.iloc[i,v]).strip()
 				v+=1
-				std.cand_email=data.iloc[i,v]
+				std.cand_email=str(data.iloc[i,v]).strip()
 				v+=1
-				std.marks=data.iloc[i,v]
+				std.marks=int(str(data.iloc[i,v]).strip())
 				v+=1
-				std.grade=data.iloc[i,v]
+				std.grade=str(data.iloc[i,v]).strip()
 				std.save()
 		messages.info(request,'uploaded file successfully')
 		return render(request,'entire_upload.html')
